@@ -1,0 +1,269 @@
+Cmp-Mod V01 Created by PcbNew date = Tue 09 Jul 2013 05:56:53 PM CDT
+
+BeginCmp
+TimeStamp = /505D365E;
+Reference = BT1;
+ValeurCmp = BATTERY;
+IdModule  = DEANS;
+EndCmp
+
+BeginCmp
+TimeStamp = /505D3F6B;
+Reference = C1;
+ValeurCmp = 0.1uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /505D39C0;
+Reference = C2;
+ValeurCmp = 0.1uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5072416C;
+Reference = C3;
+ValeurCmp = 10uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50677AD4;
+Reference = C4;
+ValeurCmp = 0.1uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /509F1F26;
+Reference = C5;
+ValeurCmp = 0.1uF;
+IdModule  = SM0805-SPLIT;
+EndCmp
+
+BeginCmp
+TimeStamp = /5067341F;
+Reference = D1;
+ValeurCmp = LED;
+IdModule  = LED-1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /50678701;
+Reference = D2;
+ValeurCmp = LED;
+IdModule  = LED-1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /505D36C0;
+Reference = P1;
+ValeurCmp = CONN_2;
+IdModule  = DEANS;
+EndCmp
+
+BeginCmp
+TimeStamp = /505D3706;
+Reference = P2;
+ValeurCmp = CONN_2;
+IdModule  = DEANS_MICRO;
+EndCmp
+
+BeginCmp
+TimeStamp = /505D36CF;
+Reference = P3;
+ValeurCmp = CONN_2;
+IdModule  = DEANS;
+EndCmp
+
+BeginCmp
+TimeStamp = /505D3702;
+Reference = P4;
+ValeurCmp = CONN_2;
+IdModule  = DEANS_MICRO;
+EndCmp
+
+BeginCmp
+TimeStamp = /505D36D4;
+Reference = P5;
+ValeurCmp = CONN_2;
+IdModule  = DEANS;
+EndCmp
+
+BeginCmp
+TimeStamp = /505D36FE;
+Reference = P6;
+ValeurCmp = CONN_2;
+IdModule  = DEANS_MICRO;
+EndCmp
+
+BeginCmp
+TimeStamp = /505D36D8;
+Reference = P7;
+ValeurCmp = CONN_2;
+IdModule  = DEANS;
+EndCmp
+
+BeginCmp
+TimeStamp = /505D36F8;
+Reference = P8;
+ValeurCmp = CONN_2;
+IdModule  = DEANS_MICRO;
+EndCmp
+
+BeginCmp
+TimeStamp = /505D36DD;
+Reference = P9;
+ValeurCmp = CONN_2;
+IdModule  = DEANS;
+EndCmp
+
+BeginCmp
+TimeStamp = /505D36E0;
+Reference = P10;
+ValeurCmp = CONN_2;
+IdModule  = DEANS_MICRO;
+EndCmp
+
+BeginCmp
+TimeStamp = /50666AC4;
+Reference = P11;
+ValeurCmp = CONN_2;
+IdModule  = DEANS;
+EndCmp
+
+BeginCmp
+TimeStamp = /50666ACA;
+Reference = P12;
+ValeurCmp = CONN_2;
+IdModule  = DEANS_MICRO;
+EndCmp
+
+BeginCmp
+TimeStamp = /508C6ACB;
+Reference = Q1;
+ValeurCmp = NMOS+PMOS;
+IdModule  = SOT23_6;
+EndCmp
+
+BeginCmp
+TimeStamp = /5077899A;
+Reference = Q2;
+ValeurCmp = N-CH;
+IdModule  = D2PACK;
+EndCmp
+
+BeginCmp
+TimeStamp = /50778990;
+Reference = Q3;
+ValeurCmp = N-CH;
+IdModule  = D2PACK;
+EndCmp
+
+BeginCmp
+TimeStamp = /506733FD;
+Reference = R1;
+ValeurCmp = 330;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50678A9A;
+Reference = R2;
+ValeurCmp = 330;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50678A9F;
+Reference = R3;
+ValeurCmp = 330;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50677ADE;
+Reference = R4;
+ValeurCmp = 330;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5066646F;
+Reference = R5;
+ValeurCmp = 330;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50666469;
+Reference = R6;
+ValeurCmp = 330;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /506786E1;
+Reference = R7;
+ValeurCmp = 330;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50678C67;
+Reference = R8;
+ValeurCmp = 330;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50666BC7;
+Reference = R9;
+ValeurCmp = 590k;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50666BDB;
+Reference = R10;
+ValeurCmp = 330k;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /509F13CB;
+Reference = R11;
+ValeurCmp = 330;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5068A2AD;
+Reference = S1;
+ValeurCmp = DPDT;
+IdModule  = DPDT_ESWITCH;
+EndCmp
+
+BeginCmp
+TimeStamp = /5070BB64;
+Reference = U1;
+ValeurCmp = LM2937;
+IdModule  = SOT223;
+EndCmp
+
+BeginCmp
+TimeStamp = /50677A38;
+Reference = U2;
+ValeurCmp = 74LVC1G374;
+IdModule  = SOT23_6;
+EndCmp
+
+BeginCmp
+TimeStamp = /50778DA5;
+Reference = XB1;
+ValeurCmp = XBEE;
+IdModule  = XBee-pro;
+EndCmp
+
+EndListe

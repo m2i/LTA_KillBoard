@@ -1,0 +1,26 @@
+Hardware revision history for the ISU LTA Killboard
+
+Revision D:
+ * Moved voltage sense divider to the manually switched battery supply and out from the NMOS switched ground
+    -> When NMOS switches removed ground potential, the center of the divider approached
+       battery voltage, which could damage the Synapse analog inputs
+ * Changed C3 capacitor brands & voltage rating
+    -> Old capacitor was EOLd by the manufacturer. Changed to a 25V rating so board is now
+       capable of distributing voltages up to ~25V.
+ * Tweaked the value of R10 to give 2.7V sensed on the Synapse when battery is 8.0V
+
+Revision C:
+ * Added 330R resistor on top of the NMOS-PMOS totem pole driver
+    -> Required to limit current through the MOSFETs since there was visible smoking of
+       MOSFETs during testing
+ * Changed C5 footprint to have a split pad on the +3.3V trace to remove poser from Synapse modules
+    -> C5 only necessary when an Xbee module is used, and Synapse modules have pin 14 as
+       no-connect. Removed because we were unfamilliar with the Synapse modules and did
+       not want to damage them accidentally.
+
+Revision B:
+ * Swapped NPN-PNP totem pole driver for a NMOS-PMOS totem pole driver
+    -> NPN-PNP combination burnt-up during testing
+
+Revision A:
+ * Initial hardware version

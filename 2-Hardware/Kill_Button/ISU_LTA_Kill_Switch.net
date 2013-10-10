@@ -1,0 +1,50 @@
+# EESchema Netlist Version 1.1 created  11/26/2012 11:46:39 PM
+(
+ ( /50836572 $noname$ BT1 BATTERY
+  ( 1 N-000018 )
+  ( 2 GND )
+ )
+ ( /50836582 SM0805 C1 C
+  ( 1 N-000019 )
+  ( 2 GND )
+ )
+ ( /5083698A SYNAPSE_SM200 RF1 SYNAPSE_S200
+  ( 1 GND )
+  ( 2 ? )
+  ( 3 ? )
+  ( 4 ? )
+  ( 5 ? )
+  ( 6 ? )
+  ( 7 ? )
+  ( 8 ? )
+  ( 9 ? )
+  ( 10 ? )
+  ( 11 ? )
+  ( 12 ? )
+  ( 13 ? )
+  ( 14 ? )
+  ( 15 ? )
+  ( 16 ? )
+  ( 17 ? )
+  ( 18 ? )
+  ( 19 ? )
+  ( 20 ? )
+  ( 21 N-000019 )
+  ( 22 ? )
+  ( 23 ? )
+  ( 24 GND )
+ )
+ ( /5083658F PIN_ARRAY_2X1 SW1 SPST
+  ( 1 N-000019 )
+  ( 2 N-000018 )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C1
+ SM*
+ C?
+ C1-1
+$endlist
+$endfootprintlist
+}
