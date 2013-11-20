@@ -1,8 +1,9 @@
 import wx
-import decimal
 import threading
+import time
 
-ltas = []
+#[0] = number, [1] = adc, [2] = status, [3] = timeout, [4] = address
+boards = []
 
 # LTA Status Codes
 LTA_BOARD_OFF = 0
@@ -11,148 +12,188 @@ LTA_BOARD_KILLED = 2
 LTA_BOARD_RESURRECTED = 3
 LTA_BOARD_LOW_BATT = 4
 
-# Number of total LTAs
-LTA_NUMBER = 6
-
+#Lower limit for colors
+GREEN_VOLTAGE = 7.5
+YELLOW_VOLTAGE = 6.5
 
 # Maximum Battery Voltage
 max_volt = 8.3
 
-def LTA_Status(status):
-    # Determine the node number
-	node_number = int(remoteNode.name.split('_')[2])
+def ping():
+        rpc(remoteAddr, "Response")
 
-	# Search for the LTA in the 
-	global ltas
-	found_lta = 0
-	for i in range(0, len(ltas)):
-		if ltas[i][1] == node_number:
-			ltas[i][0].updateStatus(status)
-			ltas[i][2] = 0
-			found_lta = 1
-	if found_lta == 0:
-		ltas.append([MainFrame(root, node_number), node_number, 0])
+def LTA_Check_In():
+        global boards
+        #global timer
+        #Called every second, updates each board
+        #timer.cancel()
+        #timer = threading.Timer(1, LTA_Check_In)
+        #timer.start()
+        if (len(boards) == 0):
+                return
+        for board in boards:
+                if board[3] == 4:
+                        board[2] = LTA_BOARD_OFF
+                        frame.Update_Board_Info(board)
+                else:
+                        board[3] = board[3] + 1
+                rpc(board[4], "callback", "LTA_Update_Info", "update_info")
 
-def LTA_Battery(adc_value):
-    # Determine the battery voltage
-	batt_voltage = max_volt*adc_value/1024
-    
-    # Determine the node number
-	node_number = int(remoteNode.name.split('_')[2])
-	
-	global ltas
-	found_lta = 0
-	for i in range(0, len(ltas)):
-		if ltas[i][1] == node_number:
-			ltas[i][0].updateBattery(batt_voltage)
-			ltas[i][2] = 0
-			found_lta = 1
-	if found_lta == 0:
-		ltas.append([MainFrame(root, node_number), node_number, 0])
-		
-def LTA_Check():
-	global ltas
-	for i in range(0, len(ltas)):
-		ltas[i][0].checkLTA()
+def LTA_Update_Info(info):
+        global boards
+        global frame
+        caller = remoteAddr
+        splitInfo = info.split('_')
+        for board in boards:
+                if board[4] == caller:
+                        board[3] = 0
+                        board[1] = splitInfo[3]
+                        board[2] = splitInfo[4]
+                        frame.Update_Board_Info(board)
+                        return
+
+def LTA_Add_Board(name, status, batt):
+        global boards
+        global frame
+        number = name.split('_')[2]
+        caller = remoteAddr
+        index = 0
+        if (len(boards) == 0) or (boards[len(boards)-1][0] < number):
+                boards.append([number, batt, status, 0, caller])
+                frame.Update_Board_Info(boards[len(boards)-1])
+                return
+        for i in range(len(boards)):
+                if boards[i][0] == number:
+                        return
+                if boards[i][0] < number:
+                        continue
+                index = i
+                break
+        boards.insert(index, [number, batt, status, 0, caller])
+        frame.Update_Board_Info(boards[index])
 
 class MainFrame(wx.Frame):
-	"""Main window frame"""
-	def __init__(self, parent, lta_number):
-		wx.Frame.__init__(self, parent, -1, "LTA " + str(lta_number) + " Status", style = wx.DEFAULT_FRAME_STYLE)
-		self.Bind(wx.EVT_CLOSE, self.onClose)
-		self.number = lta_number
-		self.panel = MainPanel(self, lta_number)
-		self.Show(True)
+        """Main window frame"""
+        def __init__(self, parent):
+                wx.Frame.__init__(self, parent, -1, "LTA Data", style = wx.DEFAULT_FRAME_STYLE, size = (800, 600))
+                self.Bind(wx.EVT_CLOSE, self.onClose)
+                self.column1 = wx.BoxSizer(wx.VERTICAL)
+                self.column2 = wx.BoxSizer(wx.VERTICAL)
+                self.MainSizer = wx.BoxSizer(wx.HORIZONTAL)
+                self.boardList = []
+                self.MainSizer.Add(self.column1)
+                self.MainSizer.Add(self.column2)
+                self.SetSizer(self.MainSizer)
+                self.SetAutoLayout(True)
+                self.Layout()
+                self.Show(True)
 
-	def onClose(self, event):
-		self.Destroy()
+        def onClose(self, event):
+                self.Destroy()
 
-	def updateBattery(self, battReading):
-        # Display the new battery reading on the gauge and in the textbox
-		self.panel.ltaWindow.voltText.SetLabel('%1.2fV' % battReading)
-		self.panel.ltaWindow.gauge.SetValue(battReading)
-		self.Refresh()
-	
-	def updateStatus(self, statusCode):
-		# Iterate over the status code returned and update the text
-		if statusCode == LTA_BOARD_OFF:
-			self.panel.ltaWindow.statusText.SetLabel('Off')
-		elif statusCode == LTA_BOARD_ON:
-			self.panel.ltaWindow.statusText.SetLabel('On')
-		elif statusCode == LTA_BOARD_KILLED:
-			self.panel.ltaWindow.statusText.SetLabel('Killed')
-		elif statusCode == LTA_BOARD_RESURRECTED:
-			self.panel.ltaWindow.statusText.SetLabel('Resurrected')
-		elif statusCode == LTA_BOARD_LOW_BATT:
-			self.panel.ltaWindow.statusText.SetLabel('Low Battery')
+        def Update_Board_Info(self, board):
+                for i in range(len(self.boardList)):
+                        if board[0] == self.boardList[i][0]:
+                                if i < 25:
+                                        children = self.boardList[i][1].GetChildren()
+                                        for child in children:
+                                                if child.IsSizer() and (child.GetSizer() !=  None):
+                                                        child.GetSizer().Destroy()
+                                                elif child.IsWindow and (child.GetWindow() != None):
+                                                        child.GetWindow().Destroy()
+                                        self.column1.Remove(self.boardList[i][1])
+                                        self.boardList[i][1] = self.NewBoxSizer(board)
+                                        self.column1.Insert(i, self.boardList[i][1], 1, wx.ALIGN_TOP | wx.EXPAND)
+                                        self.boardList[i][1].Layout()
+                                        self.column1.Layout()
+                                        self.MainSizer.Layout()
+                                        self.Layout()
+                                        return
+                                else:
+                                        children = self.boardList[i][1].GetChildren()
+                                        for child in children:
+                                                if child.IsSizer() and (child.GetSizer() !=  None):
+                                                        child.GetSizer().Destroy()
+                                                elif child.IsWindow and (child.GetWindow() != None):
+                                                        child.GetWindow().Destroy()
+                                        self.column2.Remove(self.boardList[i][1])
+                                        self.boardList[i][1] = self.NewBoxSizer(board)
+                                        self.column2.Insert(i - 25, self.boardList[i][1], 1, wx.ALIGN_TOP | wx.EXPAND)
+                                        self.boardList[i][1].Layout()
+                                        self.column2.Layout()
+                                        self.MainSizer.Layout()
+                                        self.Layout()
+                                        return
+                        if (board[0] > self.boardList[i][0]):
+                                continue
+                        self.boardList.insert(i, [board[0], self.NewBoxSizer(board)])
+                        if i < 25:
+                                self.column1.Insert(i, self.boardList[i][1], 1, wx.ALIGN_TOP | wx.EXPAND)
+                                if len(self.column1.GetChildren()) > 25:
+                                        self.column1.Detach(self.boardList[25][1])
+                                        self.column2.Insert(0, self.boardList[25][1], 1, wx.ALIGN_TOP | wx.EXPAND)
+                                        self.column2.Layout()
+                                self.column1.Layout()
+                                self.MainSizer.Layout()
+                                self.Layout()
+                                return
+                        else:
+                                self.column2.Insert(i - 25, self.boardList[i][1], 1, wx.ALIGN_TOP | wx.EXPAND)
+                                self.column2.Layout()
+                                self.MainSizer.Layout()
+                                self.Layout()
+                                return
+                self.boardList.append([board[0], self.NewBoxSizer(board)])
+                if len(self.boardList) < 25:
+                        self.column1.Add(self.boardList[len(self.boardList)-1][1], 1, wx.ALIGN_TOP | wx.EXPAND)
+                        self.column1.Layout()
+                else:
+                        self.column2.Add(self.boardList[len(self.boardList)-1][1], 1, wx.ALIGN_TOP | wx.EXPAND)
+                        self.column2.Layout()
+                self.MainSizer.Layout()
+                self.Layout()
+
+        def NewBoxSizer(self, board):
+                global nextID
+                sizer = wx.BoxSizer(wx.HORIZONTAL)
+                sizer.Add(wx.StaticText(self, -1, "LTA_Board " + board[0]), 0, wx.ALIGN_LEFT)
+                sizer.AddStretchSpacer()
+                gauge = wx.Gauge(self, nextID, 1024, size = (100, 15))
+                nextID = nextID + 1
+                gauge.SetValue(int(board[1]))
+                sizer.Add(gauge, 0, wx.ALIGN_RIGHT)
+                text = wx.StaticText(self, -1, str("%.2f" % (max_volt * int(board[1]) / 1024)))
+                if (int(board[1]) * max_volt / 1024) > GREEN_VOLTAGE:
+                        text.SetForegroundColour("Green")
+                elif int(board[1]) > YELLOW_VOLTAGE:
+                        text.SetForegroundColour("Yellow")
+                else:
+                        text.SetForegroundColour("Red")
+                sizer.Add(text, 0, wx.EXPAND | wx.ALIGN_LEFT)
+                #sizer.Add(vSizer, 0, wx.ALIGN_TOP)
+                sizer.AddStretchSpacer()
+                sizer.Add(wx.StaticText(self, -1, self.statusText(board[2])), 1, wx.ALIGN_LEFT)
+
+                return sizer
+
+        def statusText(self, status):
+                if int(status) == LTA_BOARD_OFF:
+			return "Status: Off"
+		elif int (status) == LTA_BOARD_ON:
+			return "Status: On"
+		elif int(status) == LTA_BOARD_KILLED:
+			return "Status: Killed"
+		elif int(status) == LTA_BOARD_RESURRECTED:
+			return "Status: Resurrected"
+		elif int(status) == LTA_BOARD_LOW_BATT:
+			return "Status: Low Battery"
 		else:
-			self.panel.ltaWindow.statusText.SetLabel('Unknown')
-		
-		self.Refresh()
-        
-	def checkLTA(self):
-		global ltas
-		for i in range(0, len(ltas)):
-			if ltas[i][1] == self.number:
-				ltas[i][2] = ltas[i][2] + 1
-				if ltas[i][2] >= 5:
-					self.updateStatus(LTA_BOARD_OFF)
-        
-class MainPanel(wx.Panel):
-    """Main Panel"""
-    def __init__(self, parent, lta_number):
-		wx.Panel.__init__(self, parent, -1)
-		self.MainFrame = parent
-		mainGrid = wx.BoxSizer(wx.HORIZONTAL)
-		column1 = wx.BoxSizer(wx.VERTICAL)
-		self.ltaWindow = LTA_Panel(self, lta_number)
-		mainGrid.Add(self.ltaWindow, 1 , wx.CENTER)
+			return "Status: Unknown"
 
-		self.SetSizerAndFit(mainGrid)
-
-		
-class LTA_Panel(wx.Panel):
-	def __init__(self, parent, lta_number):
-		wx.Panel.__init__(self, parent, -1)
-		self.subGrid = wx.BoxSizer(wx.VERTICAL)
-		self.voltGrid = wx.BoxSizer(wx.HORIZONTAL)
-
-		self.ltaLabel = wx.StaticText(self, -1, "0", (30, 40))
-		font = wx.Font(40, wx.DEFAULT, wx.NORMAL, wx.BOLD, False, "Arial")
-		self.ltaLabel.SetFont(font)
-		self.ltaLabel.SetLabel('LTA Board ' + str(lta_number) + ':')
-		self.subGrid.Add(self.ltaLabel, 0, wx.CENTER)
-        
-		self.gauge = wx.Gauge(self, 0, 8.5, (10, 75), (300, 25))
-		self.gauge.SetValue(0)
-		self.voltGrid.Add(self.gauge, 0, wx.EXPAND)
-
-		self.voltText = wx.StaticText(self, -1, "0", (30, 40))
-		font1 = wx.Font(24, wx.DEFAULT, wx.NORMAL, wx.BOLD, False, "Arial")
-		self.voltText.SetFont(font1)
-		self.voltGrid.Add(self.voltText, 1, wx.EXPAND)
-		
-		self.statusGrid = wx.BoxSizer(wx.HORIZONTAL)
-		self.statusLabel = wx.StaticText(self, -1, "Status:", (30,40))
-		self.statusLabel.SetFont(font1)
-		self.statusGrid.Add(self.statusLabel, 0, wx.LEFT)
-		
-		self.statusText = wx.StaticText(self, -1, "Off", (30, 40))
-		self.statusText.SetFont(font1)
-		self.statusGrid.Add(self.statusText, 1, wx.LEFT)
-		
-		self.subGrid.Add(self.voltGrid, 1, wx.LEFT)
-		self.subGrid.Add(self.statusGrid, 2, wx.LEFT)
-		self.SetSizerAndFit(self.subGrid)
-
-if __name__ == '__main__':
-    """This code is needed to run as a stand alone program""" 
-    class MyApp(wx.App):
-        def OnInit(self):
-            self.frame = MainFrame(None, 1)
-            self.SetTopWindow(self.frame)
-            return True
-
-
-    app = MyApp(0)
-    app.MainLoop()
+global frame
+global nextID
+nextID = 0
+#global timer
+frame = MainFrame(None)
+#timer = threading.Timer(1, LTA_Check_In)
+#timer.start()

@@ -22,4 +22,4 @@ def button_pressed(pin, isSet):
         
 @setHook(HOOK_1S)
 def second_timer():
-    rpc(PORTAL_ADDR, "LTA_Check")
+    rpc(PORTAL_ADDR, "LTA_Check_In")

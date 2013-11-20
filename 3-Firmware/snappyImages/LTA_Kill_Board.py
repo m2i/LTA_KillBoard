@@ -15,6 +15,9 @@ LTA_BOARD_LOW_BATT = 4
 # Is the LTA Alive?
 LTA_Alive = 0
 
+# Have we heard from portal?
+Portal_Response = 0
+
 @setHook(HOOK_STARTUP)
 def startupEvent():
     global LTA_Alive
@@ -30,49 +33,60 @@ def startupEvent():
     
     # Toggle the pin to 3.3V
     writePin(LATCH_CTRL_PIN, True)
-    
+
     adc = readAdc(BATTERY_PIN)
-    # Don't turn on the LTAs unless it is above 6.5
+    rpc(PORTAL_ADDR, "ping")
+
     if adc >= 832:
-        # Toggle the pin to 0V again
         writePin(LATCH_CTRL_PIN, False)
         rpc(PORTAL_ADDR, "logEvent", loadNvParam(8) + " has been turned on")
-        rpc(PORTAL_ADDR, "LTA_Status", loadNvParam(8), LTA_BOARD_ON)
         LTA_Alive = LTA_BOARD_ON
+        rpc(PORTAL_ADDR, "LTA_Add_Board", loadNvParam(8), LTA_Alive, adc)
     else:
         rpc(PORTAL_ADDR, "logEvent", loadNvParam(8) + " Low Battery - Not turning on")
-        rpc(PORTAL_ADDR, "LTA_Status", loadNvParam(8), LTA_BOARD_LOW_BATT)
+        rpc(PORTAL_ADDR, "LTA_Add_Board", loadNvParam(8), LTA_BOARD_LOW_BATT, adc)
         LTA_Alive = LTA_BOARD_LOW_BATT
 
+def Response():
+    global Portal_Response
+    Portal_Response = 1
 
+#TODO Update
 # Kill the LTA by setting the latch control pin high
 def kill_LTA():
     global LTA_Alive
+    global Portal_Response
     writePin(LATCH_CTRL_PIN, True)
-    rpc(PORTAL_ADDR, "logEvent", loadNvParam(8) + " has been killed")
-    rpc(PORTAL_ADDR, "LTA_Status", loadNvParam(8), LTA_BOARD_KILLED)
     LTA_Alive = LTA_BOARD_KILLED
+    if Portal_Response == 1:
+        rpc(PORTAL_ADDR, "logEvent", loadNvParam(8) + " has been killed")
 
+#TODO Update
 # Enable the motors and received by setting the latch control pin low
 def restart_LTA():
     global LTA_Alive
+    global Portal_Response
     writePin(LATCH_CTRL_PIN, False)
-    rpc(PORTAL_ADDR, "logEvent", loadNvParam(8) + " has been resurrected")
-    rpc(PORTAL_ADDR, "LTA_Status", loadNvParam(8), LTA_BOARD_RESURRECTED)
     LTA_Alive = LTA_BOARD_RESURRECTED
+    if Portal_Response == 1:
+        rpc(PORTAL_ADDR, "logEvent", loadNvParam(8) + " has been resurrected")
 
 # Return the current battery voltage as a number between 0-1023 every second
 @setHook(HOOK_1S)
 def status_check():
-    adc_value = readAdc(BATTERY_PIN)
+    global Portal_Response
+    global LTA_Alive
+    adc = readAdc(BATTERY_PIN)
+    if Portal_Response == 0:
+        rpc(PORTAL_ADDR, "ping")
+        rpc(PORTAL_ADDR, "logEvent", loadNvParam(8) + " was already active")
+        rpc(PORTAL_ADDR, "LTA_Add_Board", loadNvParam(8), LTA_Alive, adc)
+
     # Kill the LTA if the battery voltage is below 5.8V
-    if (adc_value <= 742) & (LTA_Alive == 0):
+    if (adc <= 742) and (LTA_Alive == 1 or LTA_Alive == 3):
         kill_LTA()
-        rpc(PORTAL_ADDR, "logEvent", loadNvParam(8) + " Low Battery")
-        rpc(PORTAL_ADDR, "LTA_Status", LTA_BOARD_LOW_BATT)
-    else:
-        rpc(PORTAL_ADDR, "LTA_Status", LTA_Alive)
-        
-    rpc(PORTAL_ADDR, "LTA_Battery", adc_value)
-    return(adc_value)
-    
+
+def update_info():
+    global LTA_Alive
+    adc = readAdc(BATTERY_PIN)
+    return str(loadNvParam(8) + "_" + str(adc) + "_" + str(LTA_Alive))
