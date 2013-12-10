@@ -2,6 +2,10 @@
 LATCH_CTRL_PIN = 28
 BATTERY_PIN = 5
 
+# Define the battery tolerances
+BATTERY_LOW_TURNON = 680		# Corresponds to 6.5V
+BATTERY_LOW_FLIGHT = 606		# Corresponds to 5.8V
+
 # Tell the script where to find the Portal to log the data
 PORTAL_ADDR = '\x00\x00\x01'
 
@@ -37,7 +41,7 @@ def startupEvent():
     adc = readAdc(BATTERY_PIN)
     rpc(PORTAL_ADDR, "ping")
 
-    if adc >= 832:
+    if adc >= BATTERY_LOW_TURNON:
         writePin(LATCH_CTRL_PIN, False)
         rpc(PORTAL_ADDR, "logEvent", loadNvParam(8) + " has been turned on")
         LTA_Alive = LTA_BOARD_ON
@@ -83,7 +87,7 @@ def status_check():
         rpc(PORTAL_ADDR, "LTA_Add_Board", loadNvParam(8), LTA_Alive, adc)
 
     # Kill the LTA if the battery voltage is below 5.8V
-    if (adc <= 742) and (LTA_Alive == 1 or LTA_Alive == 3):
+    if (adc <= BATTERY_LOW_FLIGHT) and (LTA_Alive == 1 or LTA_Alive == 3):
         kill_LTA()
 
 def update_info():

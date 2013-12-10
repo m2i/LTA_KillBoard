@@ -16,8 +16,8 @@ LTA_BOARD_LOW_BATT = 4
 GREEN_VOLTAGE = 7.5
 YELLOW_VOLTAGE = 6.5
 
-# Maximum Battery Voltage
-max_volt = 8.3
+# Maximum Voltage able to be sensed
+max_volt = 9.80
 
 def ping():
         rpc(remoteAddr, "Response")
