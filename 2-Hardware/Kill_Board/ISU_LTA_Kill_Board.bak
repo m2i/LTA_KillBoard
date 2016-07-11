@@ -473,7 +473,7 @@ F 1 "N-CH" H 6210 5900 60  0000 R CNN
 F 2 "" H 6200 6050 60  0001 C CNN
 F 3 "" H 6200 6050 60  0001 C CNN
 F 4 "568-6587-1-ND" H 6200 6050 60  0001 C CNN "DigikeyNumber"
-F 5 "NXP Semiconductor" H 6200 6050 60  0001 C CNN "Manufacturer"
+F 5 "NXP Semiconductors" H 6200 6050 60  0001 C CNN "Manufacturer"
 F 6 "BUK962R8-30B,118" H 6200 6050 60  0001 C CNN "ManufacturerNumber"
 F 7 "1" H 6200 6050 60  0001 C CNN "Qty"
 	1    6200 6050

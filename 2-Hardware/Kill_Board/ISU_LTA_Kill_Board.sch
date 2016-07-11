@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:ISU_LTA_Kill_Board-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -10,7 +11,6 @@ LIBS:cmos4000
 LIBS:adc-dac
 LIBS:memory
 LIBS:xilinx
-LIBS:special
 LIBS:microcontrollers
 LIBS:dsp
 LIBS:microchip
@@ -29,23 +29,18 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:DataStorage
-LIBS:Microprocessors
-LIBS:MiscellaneousDevices
-LIBS:RF_OEM_Parts
 LIBS:Sensors
-LIBS:TransistorParts
 LIBS:ISU_LTA_Kill_Board-cache
-EELAYER 27 0
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "ISU LTA Remote-Off & Telemetry System"
-Date "19 jul 2013"
-Rev "D"
+Date "7 Jul 2016"
+Rev "E"
 Comp "Iowa State University"
-Comment1 "On-LTA Device"
+Comment1 "LTA Power, Termination, Telemetry System"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -64,17 +59,9 @@ Wire Wire Line
 	7050 3850 7050 3600
 Connection ~ 5200 3600
 Wire Wire Line
-	10200 3600 10200 5100
+	10200 6050 10200 3600
 Wire Wire Line
-	10200 5100 10200 6050
-Wire Wire Line
-	10200 3600 7050 3600
-Wire Wire Line
-	7050 3600 5200 3600
-Wire Wire Line
-	5200 3600 3500 3600
-Wire Wire Line
-	3500 3600 2000 3600
+	2000 3600 10200 3600
 Connection ~ 2000 3600
 Wire Wire Line
 	4850 4300 4900 4300
@@ -84,44 +71,23 @@ Connection ~ 8250 1650
 Wire Wire Line
 	8250 1700 8250 1650
 Wire Wire Line
-	7950 1650 8250 1650
-Wire Wire Line
-	8250 1650 8550 1650
-Wire Wire Line
-	8550 1650 8750 1650
+	7950 1650 8750 1650
 Wire Wire Line
 	5350 1750 5500 1750
 Wire Wire Line
 	5550 2650 5550 2750
 Connection ~ 7050 5200
 Wire Wire Line
-	7050 5200 7050 4850
+	7050 4850 7050 6150
 Wire Wire Line
-	2000 4300 2000 3600
-Wire Wire Line
-	2000 3600 2000 3550
+	2000 3550 2000 4300
 Wire Wire Line
 	8250 2200 8250 2250
 Connection ~ 5500 5200
 Wire Wire Line
 	5500 5200 5500 5150
-Connection ~ 7050 5200
 Wire Wire Line
-	7050 5200 7050 5650
-Wire Wire Line
-	7050 5650 7050 6150
-Wire Wire Line
-	10200 6050 9850 6050
-Wire Wire Line
-	9850 6050 9350 6050
-Wire Wire Line
-	9350 6050 8850 6050
-Wire Wire Line
-	8850 6050 8350 6050
-Wire Wire Line
-	8350 6050 7850 6050
-Wire Wire Line
-	7850 6050 7350 6050
+	7350 6050 10200 6050
 Connection ~ 10200 5100
 Connection ~ 9850 6050
 Wire Wire Line
@@ -129,37 +95,19 @@ Wire Wire Line
 Wire Wire Line
 	7350 1250 7350 1300
 Wire Wire Line
-	6400 1800 6500 1800
-Wire Wire Line
-	6500 1800 6750 1800
+	6400 1800 6750 1800
 Connection ~ 6500 1800
 Connection ~ 5900 1650
 Wire Wire Line
 	5900 1800 5900 1650
 Wire Wire Line
-	6750 1650 5900 1650
-Wire Wire Line
-	5900 1650 5350 1650
+	5350 1650 6750 1650
 Wire Wire Line
 	7350 2100 7350 2000
 Wire Wire Line
-	6400 5200 7050 5200
+	6400 5200 10050 5200
 Wire Wire Line
-	7050 5200 7050 5200
-Wire Wire Line
-	7050 5200 7550 5200
-Wire Wire Line
-	7550 5200 8050 5200
-Wire Wire Line
-	8050 5200 8550 5200
-Wire Wire Line
-	8550 5200 9050 5200
-Wire Wire Line
-	9050 5200 9550 5200
-Wire Wire Line
-	9550 5200 10050 5200
-Wire Wire Line
-	6200 5350 5700 5350
+	5700 5350 6200 5350
 Connection ~ 9350 6050
 Wire Wire Line
 	9850 6050 9850 5900
@@ -168,9 +116,7 @@ Wire Wire Line
 	10050 5200 10050 4950
 Connection ~ 2800 1650
 Wire Wire Line
-	2800 1900 2800 1650
-Wire Wire Line
-	2800 1650 2800 1500
+	2800 1500 2800 1900
 Wire Wire Line
 	3250 2550 2800 2550
 Wire Wire Line
@@ -226,7 +172,7 @@ Connection ~ 8050 6150
 Wire Wire Line
 	6000 6150 5800 6150
 Wire Wire Line
-	5800 6150 5800 5200
+	5800 5200 5800 6150
 Wire Wire Line
 	7350 4950 7350 5100
 Connection ~ 7350 5100
@@ -242,37 +188,21 @@ Wire Wire Line
 	8850 6050 8850 5900
 Connection ~ 8850 6050
 Wire Wire Line
-	4000 4800 4000 4850
+	4000 4850 4000 4800
 Wire Wire Line
-	4000 4850 3550 4850
-Wire Wire Line
-	3550 4850 3100 4850
+	3100 4850 4000 4850
 Wire Wire Line
 	4000 4400 4000 4350
 Wire Wire Line
 	3250 1650 2800 1650
 Wire Wire Line
-	2800 2300 2800 2550
-Wire Wire Line
-	2800 2550 2800 2750
+	2800 2300 2800 2750
 Connection ~ 2800 2550
 Wire Wire Line
 	9850 5100 9850 4950
 Connection ~ 9350 5100
 Wire Wire Line
-	6400 6150 7050 6150
-Wire Wire Line
-	7050 6150 7550 6150
-Wire Wire Line
-	7550 6150 8050 6150
-Wire Wire Line
-	8050 6150 8550 6150
-Wire Wire Line
-	8550 6150 9050 6150
-Wire Wire Line
-	9050 6150 9550 6150
-Wire Wire Line
-	9550 6150 10050 6150
+	6400 6150 10050 6150
 Wire Wire Line
 	10050 6150 10050 5900
 Connection ~ 9550 6150
@@ -280,9 +210,7 @@ Connection ~ 5200 5200
 Wire Wire Line
 	6200 4400 5700 4400
 Wire Wire Line
-	5700 4400 5700 4850
-Wire Wire Line
-	5700 4850 5700 5350
+	5700 4400 5700 5350
 Wire Wire Line
 	6500 2200 6500 2300
 Wire Wire Line
@@ -295,30 +223,10 @@ Connection ~ 4350 4300
 Wire Wire Line
 	8400 2650 8400 2750
 Wire Wire Line
-	2000 5200 2900 5200
-Wire Wire Line
-	2900 5200 3550 5200
-Wire Wire Line
-	3550 5200 5200 5200
-Wire Wire Line
-	5200 5200 5500 5200
-Wire Wire Line
-	5500 5200 5800 5200
-Wire Wire Line
-	5800 5200 6000 5200
+	2000 5200 6000 5200
 Connection ~ 8400 2250
 Wire Wire Line
-	7350 5100 7850 5100
-Wire Wire Line
-	7850 5100 8350 5100
-Wire Wire Line
-	8350 5100 8850 5100
-Wire Wire Line
-	8850 5100 9350 5100
-Wire Wire Line
-	9350 5100 9850 5100
-Wire Wire Line
-	9850 5100 10200 5100
+	7350 5100 10200 5100
 Connection ~ 9850 5100
 Connection ~ 7050 6150
 Wire Wire Line
@@ -328,15 +236,11 @@ Wire Wire Line
 	5600 4850 5700 4850
 Connection ~ 5700 4850
 Wire Wire Line
-	4350 4300 4350 4600
+	4350 4300 4350 4900
 Wire Wire Line
-	4350 4600 4350 4900
+	8550 2250 8550 2200
 Wire Wire Line
-	8550 2200 8550 2250
-Wire Wire Line
-	8550 2250 8400 2250
-Wire Wire Line
-	8400 2250 8250 2250
+	8250 2250 8550 2250
 Wire Wire Line
 	7050 4350 7050 4450
 Wire Wire Line
@@ -354,9 +258,7 @@ Wire Wire Line
 	6950 5650 7050 5650
 Connection ~ 7050 5650
 Wire Wire Line
-	5200 4500 5200 4550
-Wire Wire Line
-	5200 4550 5200 4700
+	5200 4500 5200 4700
 Wire Wire Line
 	5200 5200 5200 5100
 Wire Wire Line
@@ -364,15 +266,9 @@ Wire Wire Line
 Wire Wire Line
 	5600 2250 5600 2200
 Wire Wire Line
-	3550 4700 3550 4850
+	3550 4700 3550 5250
 Wire Wire Line
-	3550 4850 3550 5200
-Wire Wire Line
-	3550 5200 3550 5250
-Wire Wire Line
-	2900 4000 3100 4000
-Wire Wire Line
-	3100 4000 3200 4000
+	2900 4000 3200 4000
 Connection ~ 3100 4000
 $Comp
 L C-SPLIT C5
@@ -390,7 +286,7 @@ F 7 "1" H 5550 2450 60  0001 C CNN "Qty"
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R11
+L R-RESCUE-ISU_LTA_Kill_Board R11
 U 1 1 509F13CB
 P 5200 3850
 F 0 "R11" V 5280 3850 50  0000 C CNN
@@ -450,7 +346,7 @@ F 7 "2" H 4300 2100 60  0001 C CNN "Qty"
 	1    0    0    -1  
 $EndComp
 $Comp
-L MOS_3-TERM Q2
+L MOS_3-Term Q2
 U 1 1 5077899A
 P 6200 5100
 F 0 "Q2" H 6210 5270 60  0000 R CNN
@@ -465,7 +361,7 @@ F 7 "1" H 6200 5100 60  0001 C CNN "Qty"
 	0    1    1    0   
 $EndComp
 $Comp
-L MOS_3-TERM Q3
+L MOS_3-Term Q3
 U 1 1 50778990
 P 6200 6050
 F 0 "Q3" H 6210 6220 60  0000 R CNN
@@ -490,7 +386,7 @@ V_Sense
 Text Label 2750 4600 2    60   ~ 0
 V_Sense
 $Comp
-L C C3
+L C-RESCUE-ISU_LTA_Kill_Board C3
 U 1 1 5072416C
 P 4000 4600
 F 0 "C3" H 4050 4700 50  0000 L CNN
@@ -505,7 +401,7 @@ F 7 "1" H 4000 4600 60  0001 C CNN "Qty"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR01
+L GND-RESCUE-ISU_LTA_Kill_Board #PWR01
 U 1 1 5071CBC9
 P 5550 2750
 F 0 "#PWR01" H 5550 2750 30  0001 C CNN
@@ -542,7 +438,7 @@ F 7 "1" H 3550 4450 60  0001 C CNN "Qty"
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R6
+L R-RESCUE-ISU_LTA_Kill_Board R6
 U 1 1 50666469
 P 6200 5600
 F 0 "R6" V 6280 5600 50  0000 C CNN
@@ -587,7 +483,7 @@ F 7 "1" H 3500 4000 60  0001 C CNN "Qty"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R8
+L R-RESCUE-ISU_LTA_Kill_Board R8
 U 1 1 50678C67
 P 8550 1950
 F 0 "R8" V 8630 1950 50  0000 C CNN
@@ -602,7 +498,7 @@ F 7 "1" V 8550 1950 60  0001 C CNN "Qty"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR03
+L GND-RESCUE-ISU_LTA_Kill_Board #PWR03
 U 1 1 50678AC2
 P 8400 2750
 F 0 "#PWR03" H 8400 2750 30  0001 C CNN
@@ -613,7 +509,7 @@ F 3 "" H 8400 2750 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R3
+L R-RESCUE-ISU_LTA_Kill_Board R3
 U 1 1 50678A9F
 P 4600 4900
 F 0 "R3" V 4680 4900 50  0000 C CNN
@@ -628,7 +524,7 @@ F 7 "1" V 4600 4900 60  0001 C CNN "Qty"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R2
+L R-RESCUE-ISU_LTA_Kill_Board R2
 U 1 1 50678A9A
 P 4600 4300
 F 0 "R2" V 4680 4300 50  0000 C CNN
@@ -643,7 +539,7 @@ F 7 "1" V 4600 4300 60  0001 C CNN "Qty"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L +3.3V #PWR04
+L +3.3V-RESCUE-ISU_LTA_Kill_Board #PWR04
 U 1 1 506787C5
 P 7350 1250
 F 0 "#PWR04" H 7350 1210 30  0001 C CNN
@@ -669,7 +565,7 @@ F 7 "1" H 7350 1650 60  0001 C CNN "Qty"
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED D2
+L LED-RESCUE-ISU_LTA_Kill_Board D2
 U 1 1 50678701
 P 8400 2450
 F 0 "D2" H 8400 2550 50  0000 C CNN
@@ -684,7 +580,7 @@ F 7 "1" H 8400 2450 60  0001 C CNN "Qty"
 	0    1    1    0   
 $EndComp
 $Comp
-L R R7
+L R-RESCUE-ISU_LTA_Kill_Board R7
 U 1 1 506786E1
 P 8250 1950
 F 0 "R7" V 8330 1950 50  0000 C CNN
@@ -699,7 +595,7 @@ F 7 "1" V 8250 1950 60  0001 C CNN "Qty"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR05
+L GND-RESCUE-ISU_LTA_Kill_Board #PWR05
 U 1 1 50677AF2
 P 6500 2300
 F 0 "#PWR05" H 6500 2300 30  0001 C CNN
@@ -710,7 +606,7 @@ F 3 "" H 6500 2300 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R4
+L R-RESCUE-ISU_LTA_Kill_Board R4
 U 1 1 50677ADE
 P 6150 1800
 F 0 "R4" V 6230 1800 50  0000 C CNN
@@ -725,7 +621,7 @@ F 7 "1" V 6150 1800 60  0001 C CNN "Qty"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C C4
+L C-RESCUE-ISU_LTA_Kill_Board C4
 U 1 1 50677AD4
 P 6500 2000
 F 0 "C4" H 6550 2100 50  0000 L CNN
@@ -740,7 +636,7 @@ F 7 "1" H 6500 2000 60  0001 C CNN "Qty"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR06
+L GND-RESCUE-ISU_LTA_Kill_Board #PWR06
 U 1 1 50677A81
 P 7350 2100
 F 0 "#PWR06" H 7350 2100 30  0001 C CNN
@@ -751,7 +647,7 @@ F 3 "" H 7350 2100 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED D1
+L LED-RESCUE-ISU_LTA_Kill_Board D1
 U 1 1 5067341F
 P 7050 4650
 F 0 "D1" H 7050 4750 50  0000 C CNN
@@ -766,7 +662,7 @@ F 7 "1" H 7050 4650 60  0001 C CNN "Qty"
 	0    1    1    0   
 $EndComp
 $Comp
-L R R1
+L R-RESCUE-ISU_LTA_Kill_Board R1
 U 1 1 506733FD
 P 7050 4100
 F 0 "R1" V 7130 4100 50  0000 C CNN
@@ -781,7 +677,7 @@ F 7 "1" V 7050 4100 60  0001 C CNN "Qty"
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R10
+L R-RESCUE-ISU_LTA_Kill_Board R10
 U 1 1 50666BDB
 P 2900 4850
 F 0 "R10" V 2980 4850 50  0000 C CNN
@@ -796,7 +692,7 @@ F 7 "1" V 2900 4850 60  0001 C CNN "Qty"
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R9
+L R-RESCUE-ISU_LTA_Kill_Board R9
 U 1 1 50666BC7
 P 2900 4350
 F 0 "R9" V 2980 4350 50  0000 C CNN
@@ -811,7 +707,7 @@ F 7 "1" V 2900 4350 60  0001 C CNN "Qty"
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR07
+L +3.3V-RESCUE-ISU_LTA_Kill_Board #PWR07
 U 1 1 50666BB7
 P 5600 2200
 F 0 "#PWR07" H 5600 2160 30  0001 C CNN
@@ -844,7 +740,7 @@ F 3 "" H 9950 4600 60  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R5
+L R-RESCUE-ISU_LTA_Kill_Board R5
 U 1 1 5066646F
 P 6200 4650
 F 0 "R5" V 6280 4650 50  0000 C CNN
@@ -859,7 +755,7 @@ F 7 "1" V 6200 4650 60  0001 C CNN "Qty"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C1
+L C-RESCUE-ISU_LTA_Kill_Board C1
 U 1 1 505D3F6B
 P 2800 2100
 F 0 "C1" H 2850 2200 50  0000 L CNN
@@ -874,7 +770,7 @@ F 7 "1" H 2800 2100 60  0001 C CNN "Qty"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR08
+L GND-RESCUE-ISU_LTA_Kill_Board #PWR08
 U 1 1 505D3F53
 P 2800 2750
 F 0 "#PWR08" H 2800 2750 30  0001 C CNN
@@ -885,7 +781,7 @@ F 3 "" H 2800 2750 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR09
+L +3.3V-RESCUE-ISU_LTA_Kill_Board #PWR09
 U 1 1 505D3F4E
 P 2800 1500
 F 0 "#PWR09" H 2800 1460 30  0001 C CNN
@@ -896,7 +792,7 @@ F 3 "" H 2800 1500 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR010
+L +3.3V-RESCUE-ISU_LTA_Kill_Board #PWR010
 U 1 1 505D3A23
 P 4000 4350
 F 0 "#PWR010" H 4000 4310 30  0001 C CNN
@@ -907,7 +803,7 @@ F 3 "" H 4000 4350 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C2
+L C-RESCUE-ISU_LTA_Kill_Board C2
 U 1 1 505D39C0
 P 3100 4600
 F 0 "C2" H 3150 4700 50  0000 L CNN
@@ -922,7 +818,7 @@ F 7 "1" H 3100 4600 60  0001 C CNN "Qty"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR011
+L GND-RESCUE-ISU_LTA_Kill_Board #PWR011
 U 1 1 505D3976
 P 3550 5250
 F 0 "#PWR011" H 3550 5250 30  0001 C CNN
@@ -1056,5 +952,16 @@ F 2 "" H 2000 4600 60  0001 C CNN
 F 3 "" H 2000 4600 60  0001 C CNN
 	1    2000 4600
 	0    1    1    0   
+$EndComp
+$Comp
+L LED D?
+U 1 1 577EC6FB
+P 9750 2950
+F 0 "D?" H 9750 3050 50  0000 C CNN
+F 1 "LED" H 9750 2850 50  0000 C CNN
+F 2 "" H 9750 2950 50  0000 C CNN
+F 3 "" H 9750 2950 50  0000 C CNN
+	1    9750 2950
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
