@@ -1,5 +1,6 @@
 /* LTA node for LTA Packets
- *  Takes all data sent to it and sends it out through the serial port to be parsed
+ *  This node is the node running on the LTA.  It monitors the shields, allows
+ *  for firing the laser canon and also recieves commands for manual shutdown
  *  Based on RFM69 Library and code by Felix Rusu - felix@lowpowerlab.com
  *  Libraries at:  https://github.com/LowPowerLab/
  *  
@@ -58,51 +59,15 @@
 #define RFM69_IRQN    4  // Pin 7 is IRQ 4!
 #define RFM69_RST     4
 
-
-/* for Feather M0 Radio
-#define RFM69_CS      8
-#define RFM69_IRQ     3
-#define RFM69_IRQN    3  // Pin 3 is IRQ 3!
-#define RFM69_RST     4
-*/
-
-/* ESP8266 feather w/wing
-#define RFM69_CS      2
-#define RFM69_IRQ     15
-#define RFM69_IRQN    digitalPinToInterrupt(RFM69_IRQ )
-#define RFM69_RST     16
-*/
-
-/* Feather 32u4 w/wing
-#define RFM69_RST     11   // "A"
-#define RFM69_CS      10   // "B"
-#define RFM69_IRQ     2    // "SDA" (only SDA/SCL/RX/TX have IRQ!)
-#define RFM69_IRQN    digitalPinToInterrupt(RFM69_IRQ )
-*/
-
-/* Feather m0 w/wing 
-#define RFM69_RST     11   // "A"
-#define RFM69_CS      10   // "B"
-#define RFM69_IRQ     6    // "D"
-#define RFM69_IRQN    digitalPinToInterrupt(RFM69_IRQ )
-*/
-
-/* Teensy 3.x w/wing 
-#define RFM69_RST     9   // "A"
-#define RFM69_CS      10   // "B"
-#define RFM69_IRQ     4    // "C"
-#define RFM69_IRQN    digitalPinToInterrupt(RFM69_IRQ )
-*/
-
-/* WICED Feather w/wing 
-#define RFM69_RST     PA4     // "A"
-#define RFM69_CS      PB4     // "B"
-#define RFM69_IRQ     PA15    // "C"
-#define RFM69_IRQN    RFM69_IRQ
-*/
-
 #define LED           13  // onboard blinky
-//#define LED           0 //use 0 on ESP8266
+#define SHIELD1        0 // Pin number for shields, must be interuppt pins (0,1,2, or 3)
+#define SHIELD2        1
+#define SHIELD3        2
+#define SHIELD4        3
+
+#define LASER_FIRE    1000  // Time in ms the canon fires for, this will be multiplied by 2 for cooldown
+
+int shield_gen=4;  // How many hits till the shields go off
 
 int16_t packetnum = 0;  // packet counter, we increment per xmission
 
@@ -137,6 +102,17 @@ void setup() {
   Serial.print("\nTransmitting at ");
   Serial.print(FREQUENCY==RF69_433MHZ ? 433 : FREQUENCY==RF69_868MHZ ? 868 : 915);
   Serial.println(" MHz");
+
+  //Setup interrupt
+  pinMode(SHIELD1, INPUT_PULLUP);
+  attachInterrupt(digitalPinToInterrupt(SHIELD1),ShieldHit,RISING);
+}
+
+//ISR for the Shields
+void ShieldHit()
+{
+  if (digitalRead(SHIELD1) == HIGH)
+    --shield_gen;
 }
 
 
