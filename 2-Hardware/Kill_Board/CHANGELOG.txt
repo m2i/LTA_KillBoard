@@ -1,5 +1,10 @@
 Hardware revision history for the ISU LTA Killboard
 
+Revision E:
+ * Moved from Synapse board to Adafruit Feather 324u LoRa boards
+ * Added hook ups for PWM In
+ * Added hook ups for Laser Canons and Shields
+
 Revision D:
  * Moved voltage sense divider to the manually switched battery supply and out from the NMOS switched ground
     -> When NMOS switches removed ground potential, the center of the divider approached
