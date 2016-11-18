@@ -1,6 +1,6 @@
-update=Thursday, July 07, 2016 'PMt' 03:12:52 PM
+update=11/17/2016 11:25:16 PM
 version=1
-last_client=eeschema
+last_client=kicad
 [general]
 version=1
 [cvpcb]
@@ -44,7 +44,7 @@ LibName12=/home/imcinerney/Desktop/PenguinWork/Penguin
 LibName13=/home/imcinerney/Desktop/PenguinWork/Test
 [eeschema]
 version=1
-LibDir=../../../../../../../Documents/Github/KiCad-Libraries
+LibDir=../../../KiCad-Libraries
 [eeschema/libraries]
 LibName1=ISU_LTA_Kill_Board-rescue
 LibName2=power
@@ -83,3 +83,4 @@ LibName34=MiscellaneousDevices
 LibName35=RF_OEM_Parts
 LibName36=Sensors
 LibName37=TransistorParts
+LibName38=symbols/MiscellaneousDevices
