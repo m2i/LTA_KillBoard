@@ -102,6 +102,7 @@ module cannon(){
     rotate([0, 0, 0])
     translate([0,-23,-9.2])
         servo_standard(arm_length, arm_count);
+    // Draw the cut-outs for guiding the base unit
     
     
 }
