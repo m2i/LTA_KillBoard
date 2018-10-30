@@ -1,31 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Device:Buzzer
+# Device_R_Shunt_US
 #
-DEF Device:Buzzer BZ 0 1 Y N 1 F N
-F0 "BZ" 150 50 50 H V L CNN
-F1 "Device:Buzzer" 150 -50 50 H V L CNN
-F2 "" -25 100 50 V I C CNN
-F3 "" -25 100 50 V I C CNN
-$FPLIST
- *Buzzer*
-$ENDFPLIST
-DRAW
-A 0 0 125 -899 899 0 1 0 N 0 -125 0 125
-P 2 0 1 0 -65 75 -45 75 N
-P 2 0 1 0 -55 85 -55 65 N
-P 2 0 1 0 0 125 0 -125 N
-X - 1 -100 100 100 R 50 50 1 1 P
-X + 2 -100 -100 100 R 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device:R_Shunt_US
-#
-DEF Device:R_Shunt_US R 0 0 N Y 1 F N
+DEF Device_R_Shunt_US R 0 0 N Y 1 F N
 F0 "R" -200 0 50 V V C CNN
-F1 "Device:R_Shunt_US" -120 0 50 V V C CNN
+F1 "Device_R_Shunt_US" -120 0 50 V V C CNN
 F2 "" -70 0 50 V I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -46,11 +26,11 @@ X 4 4 0 -200 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# ISU_LTA_Kill_Board-rescue:+3.3V-RESCUE-ISU_LTA_Kill_Board
+# ISU_LTA_Kill_Board-rescue_+3.3V-RESCUE-ISU_LTA_Kill_Board
 #
-DEF ISU_LTA_Kill_Board-rescue:+3.3V-RESCUE-ISU_LTA_Kill_Board #PWR 0 0 Y Y 1 F P
+DEF ISU_LTA_Kill_Board-rescue_+3.3V-RESCUE-ISU_LTA_Kill_Board #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -40 30 H I C CNN
-F1 "ISU_LTA_Kill_Board-rescue:+3.3V-RESCUE-ISU_LTA_Kill_Board" 0 110 30 H V C CNN
+F1 "ISU_LTA_Kill_Board-rescue_+3.3V-RESCUE-ISU_LTA_Kill_Board" 0 110 30 H V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -60,11 +40,11 @@ X +3.3V 1 0 0 0 U 30 30 0 0 W N
 ENDDRAW
 ENDDEF
 #
-# ISU_LTA_Kill_Board-rescue:ADAFRUIT_FEATHER
+# ISU_LTA_Kill_Board-rescue_ADAFRUIT_FEATHER
 #
-DEF ISU_LTA_Kill_Board-rescue:ADAFRUIT_FEATHER U 0 40 Y Y 2 F N
+DEF ISU_LTA_Kill_Board-rescue_ADAFRUIT_FEATHER U 0 40 Y Y 2 F N
 F0 "U" 200 -550 60 V V C CNN
-F1 "ISU_LTA_Kill_Board-rescue:ADAFRUIT_FEATHER" 200 250 60 V V C CNN
+F1 "ISU_LTA_Kill_Board-rescue_ADAFRUIT_FEATHER" 200 250 60 V V C CNN
 F2 "" 150 -200 60 H V C CNN
 F3 "" 150 -200 60 H V C CNN
 DRAW
@@ -101,11 +81,11 @@ X A3 9 -250 50 100 R 40 40 2 1 I
 ENDDRAW
 ENDDEF
 #
-# ISU_LTA_Kill_Board-rescue:BATTERY
+# ISU_LTA_Kill_Board-rescue_BATTERY
 #
-DEF ISU_LTA_Kill_Board-rescue:BATTERY BT 0 0 Y Y 1 F N
+DEF ISU_LTA_Kill_Board-rescue_BATTERY BT 0 0 Y Y 1 F N
 F0 "BT" 0 200 50 H V C CNN
-F1 "ISU_LTA_Kill_Board-rescue:BATTERY" 0 -190 50 H V C CNN
+F1 "ISU_LTA_Kill_Board-rescue_BATTERY" 0 -190 50 H V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -121,11 +101,11 @@ X - 2 300 0 150 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# ISU_LTA_Kill_Board-rescue:C-RESCUE-ISU_LTA_Kill_Board
+# ISU_LTA_Kill_Board-rescue_C-RESCUE-ISU_LTA_Kill_Board
 #
-DEF ISU_LTA_Kill_Board-rescue:C-RESCUE-ISU_LTA_Kill_Board C 0 10 N Y 1 F N
+DEF ISU_LTA_Kill_Board-rescue_C-RESCUE-ISU_LTA_Kill_Board C 0 10 N Y 1 F N
 F0 "C" 0 100 40 H V L CNN
-F1 "ISU_LTA_Kill_Board-rescue:C-RESCUE-ISU_LTA_Kill_Board" 6 -85 40 H V L CNN
+F1 "ISU_LTA_Kill_Board-rescue_C-RESCUE-ISU_LTA_Kill_Board" 6 -85 40 H V L CNN
 F2 "" 38 -150 30 H V C CNN
 F3 "" 0 0 60 H V C CNN
 $FPLIST
@@ -141,11 +121,11 @@ X ~ 2 0 -200 170 U 40 40 1 1 P
 ENDDRAW
 ENDDEF
 #
-# ISU_LTA_Kill_Board-rescue:CONN_01X02
+# ISU_LTA_Kill_Board-rescue_CONN_01X02
 #
-DEF ISU_LTA_Kill_Board-rescue:CONN_01X02 J 0 40 Y N 1 F N
+DEF ISU_LTA_Kill_Board-rescue_CONN_01X02 J 0 40 Y N 1 F N
 F0 "J" 0 150 50 H V C CNN
-F1 "ISU_LTA_Kill_Board-rescue:CONN_01X02" 100 0 50 V V C CNN
+F1 "ISU_LTA_Kill_Board-rescue_CONN_01X02" 100 0 50 V V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -163,11 +143,11 @@ X P2 2 -200 -50 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# ISU_LTA_Kill_Board-rescue:CONN_01X03
+# ISU_LTA_Kill_Board-rescue_CONN_01X03
 #
-DEF ISU_LTA_Kill_Board-rescue:CONN_01X03 J 0 40 Y N 1 F N
+DEF ISU_LTA_Kill_Board-rescue_CONN_01X03 J 0 40 Y N 1 F N
 F0 "J" 0 200 50 H V C CNN
-F1 "ISU_LTA_Kill_Board-rescue:CONN_01X03" 100 0 50 V V C CNN
+F1 "ISU_LTA_Kill_Board-rescue_CONN_01X03" 100 0 50 V V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -187,11 +167,11 @@ X P3 3 -200 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# ISU_LTA_Kill_Board-rescue:CONN_2
+# ISU_LTA_Kill_Board-rescue_CONN_2
 #
-DEF ISU_LTA_Kill_Board-rescue:CONN_2 P 0 40 Y N 1 F N
+DEF ISU_LTA_Kill_Board-rescue_CONN_2 P 0 40 Y N 1 F N
 F0 "P" -50 0 40 V V C CNN
-F1 "ISU_LTA_Kill_Board-rescue:CONN_2" 50 0 40 V V C CNN
+F1 "ISU_LTA_Kill_Board-rescue_CONN_2" 50 0 40 V V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -201,11 +181,11 @@ X PM 2 -350 -100 250 R 60 60 1 1 P I
 ENDDRAW
 ENDDEF
 #
-# ISU_LTA_Kill_Board-rescue:DPDT
+# ISU_LTA_Kill_Board-rescue_DPDT
 #
-DEF ISU_LTA_Kill_Board-rescue:DPDT S 0 40 Y Y 2 F N
+DEF ISU_LTA_Kill_Board-rescue_DPDT S 0 40 Y Y 2 F N
 F0 "S" 100 -100 60 H V C CNN
-F1 "ISU_LTA_Kill_Board-rescue:DPDT" 0 150 60 H V C CNN
+F1 "ISU_LTA_Kill_Board-rescue_DPDT" 0 150 60 H V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -219,11 +199,11 @@ X ~ 6 0 300 100 D 50 50 2 1 I
 ENDDRAW
 ENDDEF
 #
-# ISU_LTA_Kill_Board-rescue:LED-RESCUE-ISU_LTA_Kill_Board
+# ISU_LTA_Kill_Board-rescue_LED-RESCUE-ISU_LTA_Kill_Board
 #
-DEF ISU_LTA_Kill_Board-rescue:LED-RESCUE-ISU_LTA_Kill_Board D 0 40 Y N 1 F N
+DEF ISU_LTA_Kill_Board-rescue_LED-RESCUE-ISU_LTA_Kill_Board D 0 40 Y N 1 F N
 F0 "D" 0 100 50 H V C CNN
-F1 "ISU_LTA_Kill_Board-rescue:LED-RESCUE-ISU_LTA_Kill_Board" 0 -100 50 H V C CNN
+F1 "ISU_LTA_Kill_Board-rescue_LED-RESCUE-ISU_LTA_Kill_Board" 0 -100 50 H V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 $FPLIST
@@ -245,11 +225,11 @@ X K 2 200 0 150 L 40 40 1 1 P
 ENDDRAW
 ENDDEF
 #
-# ISU_LTA_Kill_Board-rescue:LM2937
+# ISU_LTA_Kill_Board-rescue_LM2937
 #
-DEF ISU_LTA_Kill_Board-rescue:LM2937 U 0 30 N Y 1 F N
+DEF ISU_LTA_Kill_Board-rescue_LM2937 U 0 30 N Y 1 F N
 F0 "U" 150 -196 60 H V C CNN
-F1 "ISU_LTA_Kill_Board-rescue:LM2937" 0 200 60 H V C CNN
+F1 "ISU_LTA_Kill_Board-rescue_LM2937" 0 200 60 H V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 $FPLIST
@@ -266,11 +246,11 @@ X VO 3 400 50 200 L 40 40 1 1 w
 ENDDRAW
 ENDDEF
 #
-# ISU_LTA_Kill_Board-rescue:MOS_3-Term
+# ISU_LTA_Kill_Board-rescue_MOS_3-Term
 #
-DEF ISU_LTA_Kill_Board-rescue:MOS_3-Term Q 0 0 N Y 1 F N
+DEF ISU_LTA_Kill_Board-rescue_MOS_3-Term Q 0 0 N Y 1 F N
 F0 "Q" 10 170 60 H V R CNN
-F1 "ISU_LTA_Kill_Board-rescue:MOS_3-Term" 10 -150 60 H V R CNN
+F1 "ISU_LTA_Kill_Board-rescue_MOS_3-Term" 10 -150 60 H V R CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -286,11 +266,11 @@ X S 3 100 -200 100 U 40 40 1 1 P
 ENDDRAW
 ENDDEF
 #
-# ISU_LTA_Kill_Board-rescue:NMOS+PMOS
+# ISU_LTA_Kill_Board-rescue_NMOS+PMOS
 #
-DEF ISU_LTA_Kill_Board-rescue:NMOS+PMOS Q 0 40 Y N 2 F N
+DEF ISU_LTA_Kill_Board-rescue_NMOS+PMOS Q 0 40 Y N 2 F N
 F0 "Q" 0 190 60 H V R CNN
-F1 "ISU_LTA_Kill_Board-rescue:NMOS+PMOS" 0 -180 60 H V R CNN
+F1 "ISU_LTA_Kill_Board-rescue_NMOS+PMOS" 0 -180 60 H V R CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -312,11 +292,11 @@ X D 6 100 200 100 D 40 40 2 1 P
 ENDDRAW
 ENDDEF
 #
-# ISU_LTA_Kill_Board-rescue:R-RESCUE-ISU_LTA_Kill_Board
+# ISU_LTA_Kill_Board-rescue_R-RESCUE-ISU_LTA_Kill_Board
 #
-DEF ISU_LTA_Kill_Board-rescue:R-RESCUE-ISU_LTA_Kill_Board R 0 0 N Y 1 F N
+DEF ISU_LTA_Kill_Board-rescue_R-RESCUE-ISU_LTA_Kill_Board R 0 0 N Y 1 F N
 F0 "R" 80 0 40 V V C CNN
-F1 "ISU_LTA_Kill_Board-rescue:R-RESCUE-ISU_LTA_Kill_Board" 7 1 40 V V C CNN
+F1 "ISU_LTA_Kill_Board-rescue_R-RESCUE-ISU_LTA_Kill_Board" 7 1 40 V V C CNN
 F2 "" -70 0 30 V V C CNN
 F3 "" 0 0 30 H V C CNN
 $FPLIST
@@ -333,11 +313,11 @@ X ~ 2 0 -250 100 U 60 60 1 1 P
 ENDDRAW
 ENDDEF
 #
-# power:+BATT
+# power_+BATT
 #
-DEF power:+BATT #PWR 0 0 Y Y 1 F P
+DEF power_+BATT #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power:+BATT" 0 140 50 H V C CNN
+F1 "power_+BATT" 0 140 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -348,11 +328,11 @@ X +BATT 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# power:GND
+# power_GND
 #
-DEF power:GND #PWR 0 0 Y Y 1 F P
+DEF power_GND #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -250 50 H I C CNN
-F1 "power:GND" 0 -150 50 H V C CNN
+F1 "power_GND" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW

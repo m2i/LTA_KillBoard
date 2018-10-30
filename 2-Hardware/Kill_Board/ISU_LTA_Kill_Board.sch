@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "ISU LTA Remote-Off & Telemetry System"
-Date "2018-07-24"
+Date "2018-10-30"
 Rev "E"
 Comp "Iowa State University"
 Comment1 "LTA Power, Termination, Telemetry System"
@@ -95,8 +95,6 @@ Text Label 7200 1800 0    60   ~ 0
 Ctrl
 Text Label 4600 4600 2    60   ~ 0
 Ctrl
-Text Label 1500 1400 2    60   ~ 0
-V_Sense
 Text Label 2750 4600 2    60   ~ 0
 V_Sense
 $Comp
@@ -615,8 +613,6 @@ Wire Wire Line
 	2900 4000 3100 4000
 Connection ~ 3100 4000
 Wire Wire Line
-	1500 1400 1900 1400
-Wire Wire Line
 	3500 2400 4400 2400
 Wire Wire Line
 	3900 900  3900 1050
@@ -786,17 +782,6 @@ Wire Wire Line
 Wire Wire Line
 	10200 3600 10200 6050
 $Comp
-L Device:Buzzer BZ?
-U 1 1 5B5E43C3
-P 6850 2350
-F 0 "BZ?" H 7003 2379 50  0000 L CNN
-F 1 "Buzzer" H 7003 2288 50  0000 L CNN
-F 2 "" V 6825 2450 50  0001 C CNN
-F 3 "~" V 6825 2450 50  0001 C CNN
-	1    6850 2350
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R_Shunt_US R?
 U 1 1 5B5E680A
 P 2700 3600
@@ -817,4 +802,8 @@ Wire Wire Line
 Connection ~ 2000 3600
 Wire Wire Line
 	2000 3600 2000 4300
+Wire Wire Line
+	3500 2100 4350 2100
+Text Label 4300 2100 0    50   ~ 0
+V_Sense
 $EndSCHEMATC
