@@ -1502,7 +1502,7 @@
   )
 
   (module Button_Switch_THT:SW_CuK_JS202011CQN_DPDT_Straight (layer Front) (tedit 5A02FE31) (tstamp 5BFE3F56)
-    (at 166.37 73.66 270)
+    (at 168.91 77.47 270)
     (descr "CuK sub miniature slide switch, JS series, DPDT, right angle, http://www.ckswitches.com/media/1422/js.pdf")
     (tags "switch DPDT")
     (path /5068A2AD)
@@ -1551,7 +1551,7 @@
   )
 
   (module Connector_Wire:SolderWirePad_1x02_P7.62mm_Drill2.5mm (layer Front) (tedit 5AEE5F2F) (tstamp 5BFE400A)
-    (at 177.8 80.01 90)
+    (at 179.07 83.82 90)
     (descr "Wire solder connection")
     (tags connector)
     (path /505D365E)
