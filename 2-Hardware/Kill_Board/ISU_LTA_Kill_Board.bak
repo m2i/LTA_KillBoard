@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "ISU LTA Remote-Off & Telemetry System"
-Date "2018-07-24"
+Date "2018-10-30"
 Rev "E"
 Comp "Iowa State University"
 Comment1 "LTA Power, Termination, Telemetry System"
@@ -15,12 +15,12 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L ISU_LTA_Kill_Board-rescue:R-RESCUE-ISU_LTA_Kill_Board R5
+L ISU_LTA_Kill_Board-rescue:R-RESCUE-ISU_LTA_Kill_Board R6
 U 1 1 509F13CB
 P 5200 3850
-F 0 "R5" V 5280 3850 50  0000 C CNN
+F 0 "R6" V 5280 3850 50  0000 C CNN
 F 1 "330" V 5200 3850 50  0000 C CNN
-F 2 "" H 5200 3850 60  0001 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 5200 3850 60  0001 C CNN
 F 3 "" H 5200 3850 60  0001 C CNN
 F 4 "P330ACT-ND" V 5200 3850 60  0001 C CNN "DigikeyNumber"
 F 5 "Panasonic Electronic Components" V 5200 3850 60  0001 C CNN "Manufacturer"
@@ -95,8 +95,6 @@ Text Label 7200 1800 0    60   ~ 0
 Ctrl
 Text Label 4600 4600 2    60   ~ 0
 Ctrl
-Text Label 1500 1400 2    60   ~ 0
-V_Sense
 Text Label 2750 4600 2    60   ~ 0
 V_Sense
 $Comp
@@ -105,7 +103,7 @@ U 1 1 5072416C
 P 4000 4600
 F 0 "C2" H 4050 4700 50  0000 L CNN
 F 1 "10uF" H 4050 4500 50  0000 L CNN
-F 2 "" H 4000 4600 60  0001 C CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 4000 4600 60  0001 C CNN
 F 3 "" H 4000 4600 60  0001 C CNN
 F 4 "445-5984-1-ND" H 4000 4600 60  0001 C CNN "DigikeyNumber"
 F 5 "TDK Corporation" H 4000 4600 60  0001 C CNN "Manufacturer"
@@ -130,12 +128,12 @@ F 7 "1" H 3550 4450 60  0001 C CNN "Qty"
 	1    0    0    -1  
 $EndComp
 $Comp
-L ISU_LTA_Kill_Board-rescue:R-RESCUE-ISU_LTA_Kill_Board R7
+L ISU_LTA_Kill_Board-rescue:R-RESCUE-ISU_LTA_Kill_Board R8
 U 1 1 50666469
 P 6200 5600
-F 0 "R7" V 6280 5600 50  0000 C CNN
+F 0 "R8" V 6280 5600 50  0000 C CNN
 F 1 "330" V 6200 5600 50  0000 C CNN
-F 2 "" H 6200 5600 60  0001 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 6200 5600 60  0001 C CNN
 F 3 "" H 6200 5600 60  0001 C CNN
 F 4 "P330ACT-ND" V 6200 5600 60  0001 C CNN "DigikeyNumber"
 F 5 "Panasonic Electronic Components" V 6200 5600 60  0001 C CNN "Manufacturer"
@@ -175,12 +173,12 @@ F 7 "1" H 3500 4000 60  0001 C CNN "Qty"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L ISU_LTA_Kill_Board-rescue:R-RESCUE-ISU_LTA_Kill_Board R4
+L ISU_LTA_Kill_Board-rescue:R-RESCUE-ISU_LTA_Kill_Board R5
 U 1 1 50678A9F
 P 4600 4900
-F 0 "R4" V 4680 4900 50  0000 C CNN
+F 0 "R5" V 4680 4900 50  0000 C CNN
 F 1 "330" V 4600 4900 50  0000 C CNN
-F 2 "" H 4600 4900 60  0001 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 4600 4900 60  0001 C CNN
 F 3 "" H 4600 4900 60  0001 C CNN
 F 4 "P330ACT-ND" V 4600 4900 60  0001 C CNN "DigikeyNumber"
 F 5 "Panasonic Electronic Components" V 4600 4900 60  0001 C CNN "Manufacturer"
@@ -190,12 +188,12 @@ F 7 "1" V 4600 4900 60  0001 C CNN "Qty"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L ISU_LTA_Kill_Board-rescue:R-RESCUE-ISU_LTA_Kill_Board R3
+L ISU_LTA_Kill_Board-rescue:R-RESCUE-ISU_LTA_Kill_Board R4
 U 1 1 50678A9A
 P 4600 4300
-F 0 "R3" V 4680 4300 50  0000 C CNN
+F 0 "R4" V 4680 4300 50  0000 C CNN
 F 1 "330" V 4600 4300 50  0000 C CNN
-F 2 "" H 4600 4300 60  0001 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 4600 4300 60  0001 C CNN
 F 3 "" H 4600 4300 60  0001 C CNN
 F 4 "P330ACT-ND" V 4600 4300 60  0001 C CNN "DigikeyNumber"
 F 5 "Panasonic Electronic Components" V 4600 4300 60  0001 C CNN "Manufacturer"
@@ -220,12 +218,12 @@ F 7 "1" H 7050 4650 60  0001 C CNN "Qty"
 	0    1    1    0   
 $EndComp
 $Comp
-L ISU_LTA_Kill_Board-rescue:R-RESCUE-ISU_LTA_Kill_Board R8
+L ISU_LTA_Kill_Board-rescue:R-RESCUE-ISU_LTA_Kill_Board R9
 U 1 1 506733FD
 P 7050 4100
-F 0 "R8" V 7130 4100 50  0000 C CNN
+F 0 "R9" V 7130 4100 50  0000 C CNN
 F 1 "330" V 7050 4100 50  0000 C CNN
-F 2 "" H 7050 4100 60  0001 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 7050 4100 60  0001 C CNN
 F 3 "" H 7050 4100 60  0001 C CNN
 F 4 "P330ACT-ND" V 7050 4100 60  0001 C CNN "DigikeyNumber"
 F 5 "Panasonic Electronic Components" V 7050 4100 60  0001 C CNN "Manufacturer"
@@ -235,12 +233,12 @@ F 7 "1" V 7050 4100 60  0001 C CNN "Qty"
 	1    0    0    -1  
 $EndComp
 $Comp
-L ISU_LTA_Kill_Board-rescue:R-RESCUE-ISU_LTA_Kill_Board R2
+L ISU_LTA_Kill_Board-rescue:R-RESCUE-ISU_LTA_Kill_Board R3
 U 1 1 50666BDB
 P 2900 4850
-F 0 "R2" V 2980 4850 50  0000 C CNN
+F 0 "R3" V 2980 4850 50  0000 C CNN
 F 1 "33k" V 2900 4850 50  0000 C CNN
-F 2 "" H 2900 4850 60  0001 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 2900 4850 60  0001 C CNN
 F 3 "" H 2900 4850 60  0001 C CNN
 F 4 "P330KCCT-ND" V 2900 4850 60  0001 C CNN "DigikeyNumber"
 F 5 "Panasonic Electronic Components" V 2900 4850 60  0001 C CNN "Manufacturer"
@@ -250,12 +248,12 @@ F 7 "1" V 2900 4850 60  0001 C CNN "Qty"
 	1    0    0    -1  
 $EndComp
 $Comp
-L ISU_LTA_Kill_Board-rescue:R-RESCUE-ISU_LTA_Kill_Board R1
+L ISU_LTA_Kill_Board-rescue:R-RESCUE-ISU_LTA_Kill_Board R2
 U 1 1 50666BC7
 P 2900 4350
-F 0 "R1" V 2980 4350 50  0000 C CNN
+F 0 "R2" V 2980 4350 50  0000 C CNN
 F 1 "75K" V 2900 4350 50  0000 C CNN
-F 2 "" H 2900 4350 60  0001 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 2900 4350 60  0001 C CNN
 F 3 "" H 2900 4350 60  0001 C CNN
 F 4 "P649KCCT-ND" V 2900 4350 60  0001 C CNN "DigikeyNumber"
 F 5 "Panasonic Electronic Components" V 2900 4350 60  0001 C CNN "Manufacturer"
@@ -265,23 +263,23 @@ F 7 "1" V 2900 4350 60  0001 C CNN "Qty"
 	1    0    0    -1  
 $EndComp
 $Comp
-L ISU_LTA_Kill_Board-rescue:CONN_2 P18
+L ISU_LTA_Kill_Board-rescue:CONN_2 P12
 U 1 1 50666ACA
 P 9950 5550
-F 0 "P18" V 9900 5550 40  0000 C CNN
+F 0 "P12" V 9900 5550 40  0000 C CNN
 F 1 "CONN_2" V 10000 5550 40  0000 C CNN
-F 2 "Connectors:DEANS_MICRO" H 9950 5550 60  0001 C CNN
+F 2 "Connectors_JST:JST_VH_B2P-VH-B_2x3.96mm_Vertical" H 9950 5550 60  0001 C CNN
 F 3 "" H 9950 5550 60  0001 C CNN
 	1    9950 5550
 	0    -1   -1   0   
 $EndComp
 $Comp
-L ISU_LTA_Kill_Board-rescue:R-RESCUE-ISU_LTA_Kill_Board R6
+L ISU_LTA_Kill_Board-rescue:R-RESCUE-ISU_LTA_Kill_Board R7
 U 1 1 5066646F
 P 6200 4650
-F 0 "R6" V 6280 4650 50  0000 C CNN
+F 0 "R7" V 6280 4650 50  0000 C CNN
 F 1 "330" V 6200 4650 50  0000 C CNN
-F 2 "" H 6200 4650 60  0001 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 6200 4650 60  0001 C CNN
 F 3 "" H 6200 4650 60  0001 C CNN
 F 4 "P330ACT-ND" V 6200 4650 60  0001 C CNN "DigikeyNumber"
 F 5 "Panasonic Electronic Components" V 6200 4650 60  0001 C CNN "Manufacturer"
@@ -291,10 +289,10 @@ F 7 "1" V 6200 4650 60  0001 C CNN "Qty"
 	1    0    0    -1  
 $EndComp
 $Comp
-L ISU_LTA_Kill_Board-rescue:+3.3V-RESCUE-ISU_LTA_Kill_Board #PWR01
+L ISU_LTA_Kill_Board-rescue:+3.3V-RESCUE-ISU_LTA_Kill_Board #PWR04
 U 1 1 505D3A23
 P 4000 4350
-F 0 "#PWR01" H 4000 4310 30  0001 C CNN
+F 0 "#PWR04" H 4000 4310 30  0001 C CNN
 F 1 "+3.3V" H 4000 4460 30  0000 C CNN
 F 2 "" H 4000 4350 60  0001 C CNN
 F 3 "" H 4000 4350 60  0001 C CNN
@@ -307,7 +305,7 @@ U 1 1 505D39C0
 P 3100 4600
 F 0 "C1" H 3150 4700 50  0000 L CNN
 F 1 "0.1uF" H 3150 4500 50  0000 L CNN
-F 2 "" H 3100 4600 60  0001 C CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 3100 4600 60  0001 C CNN
 F 3 "" H 3100 4600 60  0001 C CNN
 F 4 "311-1141-1-ND" H 3100 4600 60  0001 C CNN "DigikeyNumber"
 F 5 "Yageo" H 3100 4600 60  0001 C CNN "Manufacturer"
@@ -317,56 +315,56 @@ F 7 "1" H 3100 4600 60  0001 C CNN "Qty"
 	1    0    0    -1  
 $EndComp
 $Comp
-L ISU_LTA_Kill_Board-rescue:CONN_2 P8
+L ISU_LTA_Kill_Board-rescue:CONN_2 P7
 U 1 1 505D3706
 P 7450 5550
-F 0 "P8" V 7400 5550 40  0000 C CNN
+F 0 "P7" V 7400 5550 40  0000 C CNN
 F 1 "CONN_2" V 7500 5550 40  0000 C CNN
-F 2 "Connectors:DEANS_MICRO" H 7450 5550 60  0001 C CNN
+F 2 "Connectors_JST:JST_VH_B2P-VH-B_2x3.96mm_Vertical" H 7450 5550 60  0001 C CNN
 F 3 "" H 7450 5550 60  0001 C CNN
 	1    7450 5550
 	0    -1   -1   0   
 $EndComp
 $Comp
-L ISU_LTA_Kill_Board-rescue:CONN_2 P10
+L ISU_LTA_Kill_Board-rescue:CONN_2 P8
 U 1 1 505D3702
 P 7950 5550
-F 0 "P10" V 7900 5550 40  0000 C CNN
+F 0 "P8" V 7900 5550 40  0000 C CNN
 F 1 "CONN_2" V 8000 5550 40  0000 C CNN
-F 2 "Connectors:DEANS_MICRO" H 7950 5550 60  0001 C CNN
+F 2 "Connectors_JST:JST_VH_B2P-VH-B_2x3.96mm_Vertical" H 7950 5550 60  0001 C CNN
 F 3 "" H 7950 5550 60  0001 C CNN
 	1    7950 5550
 	0    -1   -1   0   
 $EndComp
 $Comp
-L ISU_LTA_Kill_Board-rescue:CONN_2 P12
+L ISU_LTA_Kill_Board-rescue:CONN_2 P9
 U 1 1 505D36FE
 P 8450 5550
-F 0 "P12" V 8400 5550 40  0000 C CNN
+F 0 "P9" V 8400 5550 40  0000 C CNN
 F 1 "CONN_2" V 8500 5550 40  0000 C CNN
-F 2 "Connectors:DEANS_MICRO" H 8450 5550 60  0001 C CNN
+F 2 "Connectors_JST:JST_VH_B2P-VH-B_2x3.96mm_Vertical" H 8450 5550 60  0001 C CNN
 F 3 "" H 8450 5550 60  0001 C CNN
 	1    8450 5550
 	0    -1   -1   0   
 $EndComp
 $Comp
-L ISU_LTA_Kill_Board-rescue:CONN_2 P14
+L ISU_LTA_Kill_Board-rescue:CONN_2 P10
 U 1 1 505D36F8
 P 8950 5550
-F 0 "P14" V 8900 5550 40  0000 C CNN
+F 0 "P10" V 8900 5550 40  0000 C CNN
 F 1 "CONN_2" V 9000 5550 40  0000 C CNN
-F 2 "Connectors:DEANS_MICRO" H 8950 5550 60  0001 C CNN
+F 2 "Connectors_JST:JST_VH_B2P-VH-B_2x3.96mm_Vertical" H 8950 5550 60  0001 C CNN
 F 3 "" H 8950 5550 60  0001 C CNN
 	1    8950 5550
 	0    -1   -1   0   
 $EndComp
 $Comp
-L ISU_LTA_Kill_Board-rescue:CONN_2 P16
+L ISU_LTA_Kill_Board-rescue:CONN_2 P11
 U 1 1 505D36E0
 P 9450 5550
-F 0 "P16" V 9400 5550 40  0000 C CNN
+F 0 "P11" V 9400 5550 40  0000 C CNN
 F 1 "CONN_2" V 9500 5550 40  0000 C CNN
-F 2 "Connectors:DEANS_MICRO" H 9450 5550 60  0001 C CNN
+F 2 "Connectors_JST:JST_VH_B2P-VH-B_2x3.96mm_Vertical" H 9450 5550 60  0001 C CNN
 F 3 "" H 9450 5550 60  0001 C CNN
 	1    9450 5550
 	0    -1   -1   0   
@@ -405,10 +403,10 @@ F 3 "" H 3400 1550 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L ISU_LTA_Kill_Board-rescue:+3.3V-RESCUE-ISU_LTA_Kill_Board #PWR02
+L ISU_LTA_Kill_Board-rescue:+3.3V-RESCUE-ISU_LTA_Kill_Board #PWR05
 U 1 1 582EF379
 P 4400 2400
-F 0 "#PWR02" H 4400 2360 30  0001 C CNN
+F 0 "#PWR05" H 4400 2360 30  0001 C CNN
 F 1 "+3.3V" H 4400 2510 30  0000 C CNN
 F 2 "" H 4400 2400 60  0001 C CNN
 F 3 "" H 4400 2400 60  0001 C CNN
@@ -418,13 +416,13 @@ $EndComp
 $Comp
 L ISU_LTA_Kill_Board-rescue:CONN_01X02 P1
 U 1 1 582F161E
-P 3850 700
-F 0 "P1" H 3850 850 50  0000 C CNN
-F 1 "CONN_01X02" V 3950 700 50  0000 C CNN
-F 2 "Connectors_Ian:CONN_2.54mm_1x2" H 3850 700 50  0001 C CNN
-F 3 "" H 3850 700 50  0000 C CNN
-	1    3850 700 
-	0    -1   -1   0   
+P 1450 2250
+F 0 "P1" H 1450 2400 50  0000 C CNN
+F 1 "CONN_01X02" V 1550 2250 50  0000 C CNN
+F 2 "Connectors_Ian:CONN_2.54mm_1x2" H 1450 2250 50  0001 C CNN
+F 3 "" H 1450 2250 50  0000 C CNN
+	1    1450 2250
+	-1   0    0    1   
 $EndComp
 $Comp
 L ISU_LTA_Kill_Board-rescue:CONN_01X02 P2
@@ -480,17 +478,6 @@ F 2 "Connectors_Ian:CONN_2.54mm_1x3" H 6650 700 50  0001 C CNN
 F 3 "" H 6650 700 50  0000 C CNN
 	1    6650 700 
 	0    -1   -1   0   
-$EndComp
-$Comp
-L ISU_LTA_Kill_Board-rescue:+3.3V-RESCUE-ISU_LTA_Kill_Board #PWR03
-U 1 1 582F4271
-P 6750 1150
-F 0 "#PWR03" H 6750 1110 30  0001 C CNN
-F 1 "+3.3V" H 6750 1260 30  0000 C CNN
-F 2 "" H 6750 1150 60  0001 C CNN
-F 3 "" H 6750 1150 60  0001 C CNN
-	1    6750 1150
-	0    1    1    0   
 $EndComp
 Connection ~ 2900 5200
 Wire Wire Line
@@ -615,65 +602,14 @@ Wire Wire Line
 	2900 4000 3100 4000
 Connection ~ 3100 4000
 Wire Wire Line
-	1500 1400 1900 1400
-Wire Wire Line
 	3500 2400 4400 2400
-Wire Wire Line
-	3900 900  3900 1050
-Wire Wire Line
-	3900 1050 4450 1050
-Wire Wire Line
-	6650 1050 6650 900 
-Wire Wire Line
-	4450 900  4450 1050
-Connection ~ 4450 1050
-Wire Wire Line
-	5000 900  5000 1050
-Connection ~ 5000 1050
-Wire Wire Line
-	5550 900  5550 1050
-Connection ~ 5550 1050
-Wire Wire Line
-	6100 900  6100 1050
-Connection ~ 6100 1050
-Wire Wire Line
-	3800 900  3800 1200
-Wire Wire Line
-	3800 1200 3500 1200
-Wire Wire Line
-	4350 900  4350 1300
-Wire Wire Line
-	4350 1300 3500 1300
-Wire Wire Line
-	4900 900  4900 1400
-Wire Wire Line
-	4900 1400 3500 1400
-Wire Wire Line
-	5450 900  5450 1500
-Wire Wire Line
-	5450 1500 3500 1500
-Wire Wire Line
-	6000 900  6000 1900
-Wire Wire Line
-	6550 900  6550 1700
-Wire Wire Line
-	6550 1700 3500 1700
-Wire Wire Line
-	5650 900  5650 1150
-Wire Wire Line
-	5650 1150 6200 1150
-Wire Wire Line
-	6200 1150 6200 900 
-Wire Wire Line
-	6750 1150 6750 900 
-Connection ~ 6200 1150
 Wire Wire Line
 	3550 4700 3550 4850
 $Comp
-L power:GND #PWR04
+L power:GND #PWR02
 U 1 1 582FD6C7
 P 3550 5300
-F 0 "#PWR04" H 3550 5050 50  0001 C CNN
+F 0 "#PWR02" H 3550 5050 50  0001 C CNN
 F 1 "GND" H 3550 5150 50  0000 C CNN
 F 2 "" H 3550 5300 50  0000 C CNN
 F 3 "" H 3550 5300 50  0000 C CNN
@@ -681,10 +617,10 @@ F 3 "" H 3550 5300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+BATT #PWR05
+L power:+BATT #PWR01
 U 1 1 582FE7FD
 P 2000 3450
-F 0 "#PWR05" H 2000 3300 50  0001 C CNN
+F 0 "#PWR01" H 2000 3300 50  0001 C CNN
 F 1 "+BATT" H 2000 3590 50  0000 C CNN
 F 2 "" H 2000 3450 50  0000 C CNN
 F 3 "" H 2000 3450 50  0000 C CNN
@@ -692,10 +628,10 @@ F 3 "" H 2000 3450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR06
+L power:GND #PWR03
 U 1 1 58301461
 P 3800 2650
-F 0 "#PWR06" H 3800 2400 50  0001 C CNN
+F 0 "#PWR03" H 3800 2400 50  0001 C CNN
 F 1 "GND" H 3800 2500 50  0000 C CNN
 F 2 "" H 3800 2650 50  0000 C CNN
 F 3 "" H 3800 2650 50  0000 C CNN
@@ -703,20 +639,9 @@ F 3 "" H 3800 2650 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6000 1900 3500 1900
-Wire Wire Line
 	3500 1800 7200 1800
 Wire Wire Line
 	3500 2200 3800 2200
-Wire Wire Line
-	3800 2200 3800 2600
-Wire Wire Line
-	1900 1300 1700 1300
-Wire Wire Line
-	1700 1300 1700 2600
-Wire Wire Line
-	1700 2600 3800 2600
-Connection ~ 3800 2600
 Wire Wire Line
 	2900 5200 3550 5200
 Wire Wire Line
@@ -772,49 +697,96 @@ Wire Wire Line
 Wire Wire Line
 	3100 4000 3200 4000
 Wire Wire Line
-	4450 1050 5000 1050
-Wire Wire Line
-	5000 1050 5550 1050
-Wire Wire Line
-	5550 1050 6100 1050
-Wire Wire Line
-	6100 1050 6650 1050
-Wire Wire Line
-	6200 1150 6750 1150
-Wire Wire Line
-	3800 2600 3800 2650
-Wire Wire Line
 	10200 3600 10200 6050
-$Comp
-L Device:Buzzer BZ?
-U 1 1 5B5E43C3
-P 6850 2350
-F 0 "BZ?" H 7003 2379 50  0000 L CNN
-F 1 "Buzzer" H 7003 2288 50  0000 L CNN
-F 2 "" V 6825 2450 50  0001 C CNN
-F 3 "~" V 6825 2450 50  0001 C CNN
-	1    6850 2350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Shunt_US R?
-U 1 1 5B5E680A
-P 2700 3600
-F 0 "R?" V 2568 3600 50  0000 C CNN
-F 1 "R_Shunt_US" V 2477 3600 50  0000 C CNN
-F 2 "" V 2630 3600 50  0001 C CNN
-F 3 "~" H 2700 3600 50  0001 C CNN
-	1    2700 3600
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	2000 3450 2000 3600
-Wire Wire Line
-	2900 3600 3500 3600
 Connection ~ 3500 3600
-Wire Wire Line
-	2500 3600 2000 3600
 Connection ~ 2000 3600
 Wire Wire Line
 	2000 3600 2000 4300
+Wire Wire Line
+	3800 2200 3800 2650
+Wire Wire Line
+	1900 2200 1650 2200
+Wire Wire Line
+	1900 2300 1650 2300
+Wire Wire Line
+	3800 2200 4450 2200
+Connection ~ 3800 2200
+Wire Wire Line
+	4450 900  4450 2200
+Connection ~ 4450 2200
+Wire Wire Line
+	4450 2200 5000 2200
+Wire Wire Line
+	5000 900  5000 2200
+Connection ~ 5000 2200
+Wire Wire Line
+	5000 2200 5450 2200
+Wire Wire Line
+	4350 900  4350 1600
+Wire Wire Line
+	4350 1600 3500 1600
+Wire Wire Line
+	4900 900  4900 1700
+Wire Wire Line
+	4900 1700 3500 1700
+Wire Wire Line
+	5450 900  5450 2200
+Connection ~ 5450 2200
+Wire Wire Line
+	5450 2200 6000 2200
+Wire Wire Line
+	6000 900  6000 2200
+Connection ~ 6000 2200
+Wire Wire Line
+	6000 2200 6550 2200
+Wire Wire Line
+	6550 900  6550 2200
+Connection ~ 6550 2200
+Wire Wire Line
+	6550 2200 6750 2200
+Wire Wire Line
+	3500 2000 3850 2000
+Text Label 3850 2000 0    50   ~ 0
+V_Sense
+Wire Wire Line
+	5550 900  5550 1500
+Wire Wire Line
+	6100 900  6100 1500
+Wire Wire Line
+	5550 1500 6100 1500
+Connection ~ 6100 1500
+Wire Wire Line
+	6100 1500 6650 1500
+Wire Wire Line
+	6650 900  6650 1500
+Connection ~ 6650 1500
+Wire Wire Line
+	6650 1500 7250 1500
+$Comp
+L power:+BATT #PWR06
+U 1 1 5BDC1B50
+P 7250 1500
+F 0 "#PWR06" H 7250 1350 50  0001 C CNN
+F 1 "+BATT" V 7265 1628 50  0000 L CNN
+F 2 "" H 7250 1500 50  0001 C CNN
+F 3 "" H 7250 1500 50  0001 C CNN
+	1    7250 1500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5650 900  5650 1300
+Wire Wire Line
+	5650 1300 3500 1300
+Wire Wire Line
+	6200 900  6200 1400
+Wire Wire Line
+	6200 1400 3500 1400
+Wire Wire Line
+	6750 900  6750 1900
+Wire Wire Line
+	6750 1900 3500 1900
+Wire Wire Line
+	2000 3600 3500 3600
 $EndSCHEMATC

@@ -1,4 +1,4 @@
-PCBNEW-BOARD Version 2 date Tue 16 Jul 2013 06:29:13 PM CDT
+PCBNEW-BOARD Version 2 date Thu 18 Jul 2013 07:27:00 PM CDT
 
 # Created by Pcbnew(2013-06-11 BZR 4021)-stable
 
@@ -21,7 +21,7 @@ $EndGENERAL
 $SHEETDESCR
 Sheet A4 11693 8268
 Title ""
-Date "16 jul 2013"
+Date "19 jul 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -1253,12 +1253,6 @@ At STD N 00C0FFFF
 Ne 1 "+3.3V"
 Po -11.00074 0
 $EndPAD
-$SHAPE3D
-Na "Radio/Xbee-pro.wrl"
-Sc 1 1 1
-Of 0 0 -0.1
-Ro 270 0 0
-$EndSHAPE3D
 $EndMODULE XBee-pro
 $MODULE DEANS_MICRO
 Po 109.25048 76.2508 0 15 508C6397 5070B9DC ~~

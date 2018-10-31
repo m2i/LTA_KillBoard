@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name ISU_LTA_Kill_Board-rescue)(type Legacy)(uri ${KIPRJMOD}/ISU_LTA_Kill_Board-rescue.lib)(options "")(descr ""))
+  (lib (name ISU_LTA_Kill_Board)(type Legacy)(uri ${KIPRJMOD}/ISU_LTA_Kill_Board.lib)(options "")(descr ""))
 )
