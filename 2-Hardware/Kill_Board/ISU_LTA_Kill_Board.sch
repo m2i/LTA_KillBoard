@@ -743,9 +743,6 @@ Wire Wire Line
 	6000 2200 6550 2200
 Wire Wire Line
 	6550 900  6550 2200
-Connection ~ 6550 2200
-Wire Wire Line
-	6550 2200 6750 2200
 Wire Wire Line
 	3500 2000 3850 2000
 Text Label 3850 2000 0    50   ~ 0
@@ -764,29 +761,47 @@ Wire Wire Line
 Connection ~ 6650 1500
 Wire Wire Line
 	6650 1500 7250 1500
-$Comp
-L power:+BATT #PWR06
-U 1 1 5BDC1B50
-P 7250 1500
-F 0 "#PWR06" H 7250 1350 50  0001 C CNN
-F 1 "+BATT" V 7265 1628 50  0000 L CNN
-F 2 "" H 7250 1500 50  0001 C CNN
-F 3 "" H 7250 1500 50  0001 C CNN
-	1    7250 1500
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5650 900  5650 1300
-Wire Wire Line
-	5650 1300 3500 1300
-Wire Wire Line
-	6200 900  6200 1400
-Wire Wire Line
-	6200 1400 3500 1400
-Wire Wire Line
-	6750 900  6750 1900
-Wire Wire Line
-	6750 1900 3500 1900
 Wire Wire Line
 	2000 3600 3500 3600
+Wire Wire Line
+	1900 1700 950  1700
+Wire Wire Line
+	950  1700 950  3000
+Wire Wire Line
+	950  3000 6750 3000
+Wire Wire Line
+	6200 2900 1100 2900
+Wire Wire Line
+	1100 2900 1100 1800
+Wire Wire Line
+	1100 1800 1900 1800
+Wire Wire Line
+	6200 900  6200 2900
+Wire Wire Line
+	1900 1900 1200 1900
+Wire Wire Line
+	1200 1900 1200 2800
+Wire Wire Line
+	1200 2800 5650 2800
+Wire Wire Line
+	5650 900  5650 2800
+Wire Wire Line
+	6750 900  6750 3000
+$Comp
+L ISU_LTA_Kill_Board-rescue:+3.3V-RESCUE-ISU_LTA_Kill_Board #PWR?
+U 1 1 5BDD1397
+P 7300 1550
+F 0 "#PWR?" H 7300 1510 30  0001 C CNN
+F 1 "+3.3V" H 7300 1660 30  0000 C CNN
+F 2 "" H 7300 1550 60  0001 C CNN
+F 3 "" H 7300 1550 60  0001 C CNN
+	1    7300 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 1500 7250 1600
+Wire Wire Line
+	7250 1600 7300 1600
+Wire Wire Line
+	7300 1600 7300 1550
 $EndSCHEMATC
