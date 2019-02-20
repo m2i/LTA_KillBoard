@@ -1,0 +1,318 @@
+Info: Checking netlist symbol footprint “P10:/505D36FE:Connectors_JST:JST_VH_B2P-VH-B_2x3.96mm_Vertical”.
+
+Info: Checking netlist symbol footprint “C3:/5C01EE23:Capacitors_SMD:C_0805_HandSoldering”.
+
+Info: Checking netlist symbol footprint “U3:/5C01C6C6:TO_SOT_Packages_SMD:TO-263-3_TabPin2”.
+
+Info: Checking netlist symbol footprint “R6:/5066646F:Resistors_SMD:R_0805_HandSoldering”.
+
+Info: Checking netlist symbol footprint “P13:/50666ACA:Connectors_JST:JST_VH_B2P-VH-B_2x3.96mm_Vertical”.
+
+Info: Checking netlist symbol footprint “C4:/5C01EF13:Capacitors_SMD:C_0805_HandSoldering”.
+
+Info: Checking netlist symbol footprint “P12:/505D36E0:Connectors_JST:JST_VH_B2P-VH-B_2x3.96mm_Vertical”.
+
+Info: Checking netlist symbol footprint “P11:/505D36F8:Connectors_JST:JST_VH_B2P-VH-B_2x3.96mm_Vertical”.
+
+Info: Checking netlist symbol footprint “R5:/509F13CB:Resistors_SMD:R_0805_HandSoldering”.
+
+Info: Checking netlist symbol footprint “D1:/5067341F:LEDs:LED_0805_HandSoldering”.
+
+Info: Checking netlist symbol footprint “U2:/5070BB64:Package_TO_SOT_SMD:SOT-223”.
+
+Info: Checking netlist symbol footprint “P7:/5C06E3AB:Pin_Headers:Pin_Header_Angled_1x03_Pitch2.54mm”.
+
+Info: Checking netlist symbol footprint “P6:/582F1B35:Pin_Headers:Pin_Header_Angled_1x03_Pitch2.54mm”.
+
+Info: Checking netlist symbol footprint “D2:/5C074B6F:LEDs:LED_0805_HandSoldering”.
+
+Info: Checking netlist symbol footprint “R4:/50678A9F:Resistors_SMD:R_0805_HandSoldering”.
+
+Info: Checking netlist symbol footprint “P5:/582F1AB8:Pin_Headers:Pin_Header_Angled_1x03_Pitch2.54mm”.
+
+Info: Checking netlist symbol footprint “P4:/582F1A31:Pin_Headers:Pin_Header_Angled_1x03_Pitch2.54mm”.
+
+Info: Checking netlist symbol footprint “P1:/582F161E:Pin_Headers:Pin_Header_Angled_1x02_Pitch2.54mm”.
+
+Info: Checking netlist symbol footprint “P2:/582F16A1:Pin_Headers:Pin_Header_Angled_1x02_Pitch2.54mm”.
+
+Info: Checking netlist symbol footprint “P3:/582F1761:Pin_Headers:Pin_Header_Angled_1x02_Pitch2.54mm”.
+
+Info: Checking netlist symbol footprint “R8:/506733FD:Resistors_SMD:R_0805_HandSoldering”.
+
+Info: Checking netlist symbol footprint “U1:/582E9EFE:Adafruit:AdafruitFeather”.
+
+Info: Checking netlist symbol footprint “Q3:/50778990:Package_TO_SOT_SMD:TO-263-3_TabPin2”.
+
+Info: Checking netlist symbol footprint “BEC1:/5C06E451:Pin_Headers:Pin_Header_Angled_1x03_Pitch2.54mm”.
+
+Info: Checking netlist symbol footprint “S1:/5068A2AD:Button_Switch_THT:SW_CuK_JS202011CQN_DPDT_Straight”.
+
+Info: Checking netlist symbol footprint “R2:/50666BDB:Resistors_SMD:R_0805_HandSoldering”.
+
+Info: Checking netlist symbol footprint “Q2:/5077899A:Package_TO_SOT_SMD:TO-263-3_TabPin2”.
+
+Info: Checking netlist symbol footprint “R1:/50666BC7:Resistors_SMD:R_0805_HandSoldering”.
+
+Info: Checking netlist symbol footprint “BT1:/505D365E:Connector_Wire:SolderWirePad_1x02_P7.62mm_Drill2.5mm”.
+
+Info: Checking netlist symbol footprint “C1:/505D39C0:Capacitors_SMD:C_0805_HandSoldering”.
+
+Info: Checking netlist symbol footprint “Q1:/508C6ACB:Package_TO_SOT_SMD:SOT-23-6_Handsoldering”.
+
+Info: Checking netlist symbol footprint “U4:/5C6E1825:Housings_SSOP:TSSOP-14_4.4x5mm_Pitch0.65mm”.
+
+Info: Checking netlist symbol footprint “R3:/50678A9A:Resistors_SMD:R_0805_HandSoldering”.
+
+Info: Checking netlist symbol footprint “C2:/5072416C:Capacitors_SMD:C_0805_HandSoldering”.
+
+Info: Checking netlist symbol footprint “R7:/50666469:Resistors_SMD:R_0805_HandSoldering”.
+
+Adding new symbol “U4:/5C6E1825” footprint “Housings_SSOP:TSSOP-14_4.4x5mm_Pitch0.65mm”.
+
+Changing footprint “U1:/582E9EFE” pad “16” net name from “” to “Net-(U1-Pad16)”.
+
+Changing footprint “U4:/5C6E1825” pad “14” net name from “” to “+5V”.
+
+Changing footprint “U4:/5C6E1825” pad “13” net name from “” to “Net-(P4-Pad3)”.
+
+Changing footprint “U3:/5C01C6C6” pad “1” net name from “” to “Net-(C1-Pad1)”.
+
+Changing footprint “U1:/582E9EFE” pad “21” net name from “” to “Net-(U1-Pad21)”.
+
+Changing footprint “R6:/5066646F” pad “2” net name from “” to “Net-(Q2-Pad1)”.
+
+Changing footprint “U1:/582E9EFE” pad “14” net name from “” to “Net-(U1-Pad14)”.
+
+Changing footprint “U1:/582E9EFE” pad “1” net name from “” to “Net-(U1-Pad1)”.
+
+Changing footprint “U1:/582E9EFE” pad “4” net name from “” to “Net-(U1-Pad4)”.
+
+Changing footprint “U1:/582E9EFE” pad “6” net name from “” to “Net-(U1-Pad6)”.
+
+Changing footprint “U1:/582E9EFE” pad “2” net name from “” to “Net-(U1-Pad2)”.
+
+Changing footprint “U1:/582E9EFE” pad “17” net name from “” to “Net-(U1-Pad17)”.
+
+Changing footprint “U1:/582E9EFE” pad “19” net name from “” to “Net-(U1-Pad19)”.
+
+Changing footprint “U1:/582E9EFE” pad “18” net name from “” to “Net-(U1-Pad18)”.
+
+Changing footprint “U3:/5C01C6C6” pad “2” net name from “” to “GND”.
+
+Changing footprint “U1:/582E9EFE” pad “26” net name from “” to “Net-(U1-Pad26)”.
+
+Adding new symbol “U3:/5C01C6C6” footprint “TO_SOT_Packages_SMD:TO-263-3_TabPin2”.
+
+Changing footprint “U3:/5C01C6C6” pad “2” net name from “” to “GND”.
+
+Changing footprint “U3:/5C01C6C6” pad “2” net name from “” to “GND”.
+
+Changing footprint “U3:/5C01C6C6” pad “2” net name from “” to “GND”.
+
+Changing footprint “U3:/5C01C6C6” pad “2” net name from “” to “GND”.
+
+Changing footprint “U3:/5C01C6C6” pad “2” net name from “” to “GND”.
+
+Changing footprint “U3:/5C01C6C6” pad “3” net name from “” to “+5V”.
+
+Remove single pad net “Net-(U1-Pad21)” on “U1” pad “21”
+
+Remove single pad net “Net-(U1-Pad16)” on “U1” pad “16”
+
+Remove single pad net “Net-(U1-Pad14)” on “U1” pad “14”
+
+Remove single pad net “Net-(U1-Pad1)” on “U1” pad “1”
+
+Remove single pad net “Net-(U1-Pad6)” on “U1” pad “6”
+
+Remove single pad net “Net-(U1-Pad2)” on “U1” pad “2”
+
+Remove single pad net “Net-(U1-Pad17)” on “U1” pad “17”
+
+Remove single pad net “Net-(U1-Pad19)” on “U1” pad “19”
+
+Remove single pad net “Net-(U1-Pad18)” on “U1” pad “18”
+
+Remove single pad net “Net-(U1-Pad12)” on “U1” pad “12”
+
+Remove single pad net “Net-(U1-Pad26)” on “U1” pad “26”
+
+Remove single pad net “Net-(U1-Pad5)” on “U1” pad “5”
+
+Remove single pad net “Net-(U1-Pad10)” on “U1” pad “10”
+
+Remove single pad net “Net-(U1-Pad4)” on “U1” pad “4”
+
+Remove single pad net “Net-(BEC1-Pad3)” on “BEC1” pad “3”
+
+Remove single pad net “Net-(U4-Pad9)” on “U4” pad “9”
+
+Remove single pad net “Net-(U4-Pad6)” on “U4” pad “6”
+
+Remove single pad net “+3V3” on “U4” pad “1”
+
+Changing footprint “U4:/5C6E1825” pad “3” net name from “” to “Net-(U1-Pad23)”.
+
+Changing footprint “U4:/5C6E1825” pad “11” net name from “” to “Net-(P6-Pad3)”.
+
+Changing footprint “U4:/5C6E1825” pad “10” net name from “” to “Net-(P7-Pad3)”.
+
+Changing footprint “U4:/5C6E1825” pad “9” net name from “” to “Net-(U4-Pad9)”.
+
+Changing footprint “U4:/5C6E1825” pad “8” net name from “” to “+BATT”.
+
+Changing footprint “U4:/5C6E1825” pad “7” net name from “” to “GND”.
+
+Changing footprint “U4:/5C6E1825” pad “6” net name from “” to “Net-(U4-Pad6)”.
+
+Changing footprint “U4:/5C6E1825” pad “5” net name from “” to “Net-(U1-Pad20)”.
+
+Changing footprint “U4:/5C6E1825” pad “4” net name from “” to “Net-(U1-Pad22)”.
+
+Changing footprint “U4:/5C6E1825” pad “12” net name from “” to “Net-(P5-Pad3)”.
+
+Changing footprint “U4:/5C6E1825” pad “2” net name from “” to “Net-(U1-Pad24)”.
+
+Changing footprint “U4:/5C6E1825” pad “1” net name from “” to “+3V3”.
+
+Remove single pad net “Net-(Q1-Pad3)” on “R3” pad “2”
+
+Remove single pad net “Net-(Q1-Pad2)” on “R5” pad “2”
+
+Remove single pad net “Net-(Q1-Pad1)” on “R4” pad “2”
+
+Remove single pad net “Net-(Q2-Pad1)” on “R6” pad “2”
+
+Remove single pad net “Net-(Q3-Pad1)” on “R7” pad “2”
+
+Remove single pad net “Net-(U1-Pad3)” on “U1” pad “3”
+
+Adding new symbol “C4:/5C01EF13” footprint “Capacitors_SMD:C_0805_HandSoldering”.
+
+Adding new symbol “R1:/50666BC7” footprint “Resistors_SMD:R_0805_HandSoldering”.
+
+Adding new symbol “BEC1:/5C06E451” footprint “Pin_Headers:Pin_Header_Angled_1x03_Pitch2.54mm”.
+
+Changing footprint “P13:/50666ACA” pad “1” net name from “” to “+BATT”.
+
+Changing footprint “P13:/50666ACA” pad “2” net name from “” to “/High_Side”.
+
+Adding new symbol “P13:/50666ACA” footprint “Connectors_JST:JST_VH_B2P-VH-B_2x3.96mm_Vertical”.
+
+Changing footprint “D2:/5C074B6F” pad “2” net name from “” to “+5V”.
+
+Changing footprint “D2:/5C074B6F” pad “1” net name from “” to “Net-(BEC1-Pad2)”.
+
+Adding new symbol “D2:/5C074B6F” footprint “LEDs:LED_0805_HandSoldering”.
+
+Changing footprint “D1:/5067341F” pad “1” net name from “” to “Net-(D1-Pad1)”.
+
+Changing footprint “D1:/5067341F” pad “2” net name from “” to “/High_Side”.
+
+Adding new symbol “D1:/5067341F” footprint “LEDs:LED_0805_HandSoldering”.
+
+Changing footprint “C4:/5C01EF13” pad “2” net name from “” to “GND”.
+
+Changing footprint “C4:/5C01EF13” pad “1” net name from “” to “+5V”.
+
+Changing footprint “R1:/50666BC7” pad “2” net name from “” to “/V_Sense”.
+
+Changing footprint “C3:/5C01EE23” pad “1” net name from “” to “Net-(C1-Pad1)”.
+
+Changing footprint “C3:/5C01EE23” pad “2” net name from “” to “GND”.
+
+Adding new symbol “C3:/5C01EE23” footprint “Capacitors_SMD:C_0805_HandSoldering”.
+
+Changing footprint “C2:/5072416C” pad “2” net name from “” to “GND”.
+
+Changing footprint “C2:/5072416C” pad “1” net name from “” to “+3.3V”.
+
+Adding new symbol “C2:/5072416C” footprint “Capacitors_SMD:C_0805_HandSoldering”.
+
+Changing footprint “C1:/505D39C0” pad “1” net name from “” to “Net-(C1-Pad1)”.
+
+Changing footprint “C1:/505D39C0” pad “2” net name from “” to “GND”.
+
+Adding new symbol “C1:/505D39C0” footprint “Capacitors_SMD:C_0805_HandSoldering”.
+
+Changing footprint “BEC1:/5C06E451” pad “3” net name from “” to “Net-(BEC1-Pad3)”.
+
+Changing footprint “BEC1:/5C06E451” pad “1” net name from “” to “GND”.
+
+Changing footprint “BEC1:/5C06E451” pad “2” net name from “” to “Net-(BEC1-Pad2)”.
+
+Changing footprint “R5:/509F13CB” pad “2” net name from “” to “Net-(Q1-Pad2)”.
+
+Changing footprint “U1:/582E9EFE” pad “3” net name from “” to “Net-(U1-Pad3)”.
+
+Changing footprint “U1:/582E9EFE” pad “10” net name from “” to “Net-(U1-Pad10)”.
+
+Changing footprint “U1:/582E9EFE” pad “5” net name from “” to “Net-(U1-Pad5)”.
+
+Changing footprint “U1:/582E9EFE” pad “12” net name from “” to “Net-(U1-Pad12)”.
+
+Changing footprint “R8:/506733FD” pad “2” net name from “” to “Net-(D1-Pad1)”.
+
+Changing footprint “R8:/506733FD” pad “1” net name from “” to “+BATT”.
+
+Adding new symbol “R8:/506733FD” footprint “Resistors_SMD:R_0805_HandSoldering”.
+
+Changing footprint “R7:/50666469” pad “2” net name from “” to “Net-(Q3-Pad1)”.
+
+Changing footprint “R7:/50666469” pad “1” net name from “” to “Net-(R6-Pad1)”.
+
+Adding new symbol “R7:/50666469” footprint “Resistors_SMD:R_0805_HandSoldering”.
+
+Changing footprint “R6:/5066646F” pad “1” net name from “” to “Net-(R6-Pad1)”.
+
+Adding new symbol “R6:/5066646F” footprint “Resistors_SMD:R_0805_HandSoldering”.
+
+Changing footprint “R1:/50666BC7” pad “1” net name from “” to “Net-(C1-Pad1)”.
+
+Changing footprint “R5:/509F13CB” pad “1” net name from “” to “+BATT”.
+
+Adding new symbol “R5:/509F13CB” footprint “Resistors_SMD:R_0805_HandSoldering”.
+
+Changing footprint “R4:/50678A9F” pad “2” net name from “” to “Net-(Q1-Pad1)”.
+
+Changing footprint “R4:/50678A9F” pad “1” net name from “” to “/Ctrl”.
+
+Adding new symbol “R4:/50678A9F” footprint “Resistors_SMD:R_0805_HandSoldering”.
+
+Changing footprint “R3:/50678A9A” pad “1” net name from “” to “/Ctrl”.
+
+Changing footprint “R3:/50678A9A” pad “2” net name from “” to “Net-(Q1-Pad3)”.
+
+Adding new symbol “R3:/50678A9A” footprint “Resistors_SMD:R_0805_HandSoldering”.
+
+Changing footprint “R2:/50666BDB” pad “1” net name from “” to “/V_Sense”.
+
+Changing footprint “R2:/50666BDB” pad “2” net name from “” to “GND”.
+
+Adding new symbol “R2:/50666BDB” footprint “Resistors_SMD:R_0805_HandSoldering”.
+
+Error: Component “U2” footprint “SOT-223” was not found in any libraries in the footprint library table.
+
+Error: Component “Q1” footprint “SOT-23-6_Handsoldering” was not found in any libraries in the footprint library table.
+
+Error: Component “S1” footprint “SW_CuK_JS202011CQN_DPDT_Straight” was not found in any libraries in the footprint library table.
+
+Error: Component “BT1” footprint “SolderWirePad_1x02_P7.62mm_Drill2.5mm” was not found in any libraries in the footprint library table.
+
+Error: Component “Q2” footprint “TO-263-3_TabPin2” was not found in any libraries in the footprint library table.
+
+Error: Cannot add new symbol “BT1:/505D365E” due to missing footprint “Connector_Wire:SolderWirePad_1x02_P7.62mm_Drill2.5mm”.
+
+Error: Cannot add new symbol “Q1:/508C6ACB” due to missing footprint “Package_TO_SOT_SMD:SOT-23-6_Handsoldering”.
+
+Error: Cannot add new symbol “Q2:/5077899A” due to missing footprint “Package_TO_SOT_SMD:TO-263-3_TabPin2”.
+
+Error: Cannot add new symbol “Q3:/50778990” due to missing footprint “Package_TO_SOT_SMD:TO-263-3_TabPin2”.
+
+Error: Cannot add new symbol “U2:/5070BB64” due to missing footprint “Package_TO_SOT_SMD:SOT-223”.
+
+Error: Component “Q3” footprint “TO-263-3_TabPin2” was not found in any libraries in the footprint library table.
+
+Error: Cannot add new symbol “S1:/5068A2AD” due to missing footprint “Button_Switch_THT:SW_CuK_JS202011CQN_DPDT_Straight”.
+
