@@ -1,0 +1,222 @@
+(kicad_symbol_lib (version 20211014) (generator kicad_symbol_editor)
+  (symbol "TSOP38238" (in_bom yes) (on_board yes)
+    (property "Reference" "U" (id 0) (at 0 0 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "TSOP38238" (id 1) (at 0 0 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (id 2) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (id 3) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (symbol "TSOP38238_0_0"
+      (arc (start -8.7879 11.7475) (mid -9.5908 10.16) (end -8.7879 8.5725)
+        (stroke (width 0.254) (type default) (color 0 0 0 0))
+        (fill (type background))
+      )
+      (polyline
+        (pts
+          (xy 3.4041 5.2705)
+          (xy 1.6261 5.2705)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 3.4041 15.4305)
+          (xy 1.6261 15.4305)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (text "DEMOD" (at -1.6759 10.6045 900)
+        (effects (font (size 1.524 1.524)))
+      )
+    )
+    (symbol "TSOP38238_0_1"
+      (rectangle (start -4.5969 15.9385) (end 1.6261 4.7625)
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy -7.2639 10.7315)
+          (xy -8.1529 11.6205)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy -7.2639 10.7315)
+          (xy -7.7719 10.7315)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy -7.2639 10.7315)
+          (xy -7.2639 11.2395)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy -7.1369 9.7155)
+          (xy -8.0259 10.6045)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy -7.1369 9.7155)
+          (xy -7.6449 9.7155)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy -7.1369 9.7155)
+          (xy -7.1369 10.2235)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy -6.8829 9.3345)
+          (xy -5.2319 9.3345)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 2.7691 7.4295)
+          (xy 1.6261 7.4295)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 2.7691 8.4455)
+          (xy 2.7691 6.5405)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 2.8961 6.7945)
+          (xy 3.0231 6.7945)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 3.1501 6.7945)
+          (xy 3.0231 6.7945)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 3.1501 6.7945)
+          (xy 3.1501 7.0485)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 3.4041 10.3505)
+          (xy 3.4041 11.6205)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 3.4041 14.7955)
+          (xy 3.4041 15.4305)
+          (xy 4.0391 15.4305)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy -6.8829 10.9855)
+          (xy -5.2319 10.9855)
+          (xy -6.1209 9.3345)
+          (xy -6.8829 10.9855)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type outline))
+      )
+      (polyline
+        (pts
+          (xy -4.5969 11.7475)
+          (xy -6.1209 11.7475)
+          (xy -6.1209 8.5725)
+          (xy -4.5969 8.5725)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 2.7691 7.1755)
+          (xy 3.4041 6.5405)
+          (xy 3.4041 5.2705)
+          (xy 4.0391 5.2705)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 2.7691 7.8105)
+          (xy 3.4041 8.4455)
+          (xy 3.4041 10.3505)
+          (xy 4.0391 10.3505)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (rectangle (start 4.0391 11.6205) (end 2.7691 14.7955)
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (rectangle (start 9.1191 16.7005) (end -8.6609 4.0005)
+        (stroke (width 0.254) (type default) (color 0 0 0 0))
+        (fill (type background))
+      )
+    )
+    (symbol "TSOP38238_1_1"
+      (pin output line (at 11.6591 10.3505 180) (length 2.54)
+        (name "OUT" (effects (font (size 1.27 1.27))))
+        (number "1" (effects (font (size 1.27 1.27))))
+      )
+      (pin power_in line (at 11.6591 5.2705 180) (length 2.54)
+        (name "GND" (effects (font (size 1.27 1.27))))
+        (number "2" (effects (font (size 1.27 1.27))))
+      )
+      (pin power_in line (at 11.6591 15.4305 180) (length 2.54)
+        (name "Vs" (effects (font (size 1.27 1.27))))
+        (number "3" (effects (font (size 1.27 1.27))))
+      )
+    )
+  )
+)
